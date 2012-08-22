@@ -7,3 +7,6 @@ tmp
 dist.idea
 .idea_modules
 .settings
+django-env
+*.pyc
+*.swp
