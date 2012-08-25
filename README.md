@@ -25,11 +25,10 @@ This is the source code for my website. It's hosted on Heroku for absolutely not
 		
 * Set up the database
 	
-		$ website/manage.py createdb
+		$ ./manage.py createdb
 		
 * Check everything works
 
-		$ cd website/
 		$ ./manage.py runserver
   and visiting [http://localhost:8000](http://localhost:8000).
 		
@@ -50,7 +49,7 @@ Only I hold the privileges to deploy to my domain (at least until the time when 
 	
 	heroku create
 	git push heroku local-branch-name:master #you can skip local-branch-name: if you are pushing from master
-	heroku run website/manage.py createdb
+	heroku run ./manage.py createdb
 	
 You don't need to run `syncdb` if you're pushing to an existing Heroku domain. You may need to run `migrate` depending on whether you've made any schema changes.
 	
