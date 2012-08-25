@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}
+    Introducing me
+{% endblock %}
+{% block byline %}I've been around 28 years, but it's never too late for an introduction{% endblock %}
+
+{% block main %}
+    <div class="marketing">
+
+        <div class="row">
+            <div class="span4">
+                <h2>A software engineer.</h2>
+
+                <p>I work for a <a href="http://www.cloudreach.co.uk" target="_blank">Cloud Computing consultancy</a> in
+                    London, and am
+                    passionate about Agile, TDD, and Continuous Delivery. </p>
+            </div>
+            <div class="span4">
+                <h2>A geek.</h2>
+
+                <p> I love Heroku and Django. I like Play Framework, Android, and Google App Engine. I play with most of
+                    these during a typical work week.</p>
+            </div>
+            <div class="span4">
+                <h2>A people person.</h2>
+
+                <p> I like people almost as much as I do computers, and am heavily involved in recruitment, and
+                    developer training and mentoring.</p>
+            </div>
+        </div>
+    </div>
+    <div class="marketing spaced">
+        <div class="row">
+            <div class="span4">
+                <h2>A wanderer.</h2>
+
+                <p>I gained an education in India, Scotland, and Germany, and have worked in diverse environments in
+                    England and Scotland.</p>
+            </div>
+            <div class="span4">
+                <h2>Once a journalist and blogger.</h2>
+
+                <p>I used to work part-time for an <a href="http://www.rediff.com" target="_blank">Indian news
+                    magazine</a>. I used to
+                    attempt on a regular basis to write a humorous <a href="http://siddhuw.blogspot.com"
+                                                                      target="_blank">blog</a>.</p>
+            </div>
+            <div class="span4">
+                <h2>A reader.</h2>
+
+                <p>Yes, that sounds clichéd, but I'm always happiest in the company of Wodehouse, Tagore, Bryson, and
+                    Conan Doyle. And no, I don't particularly like Douglas Adams.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

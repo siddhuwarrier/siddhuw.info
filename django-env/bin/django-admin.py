@@ -1,4 +1,4 @@
-#!/Users/siddhu/Documents/workspace/siddhuw.info/django-env/bin/python
+#!/Users/siddhu/Documents/workspace/website_cms/django-env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

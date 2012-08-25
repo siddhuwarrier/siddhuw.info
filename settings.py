@@ -136,6 +136,9 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SITE_ID = 1
 
+SITE_TITLE = "Siddhu Warrier"
+SITE_TAGLINE = "Software Engineer"
+
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = False
@@ -228,6 +231,7 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
+    "siddhuw",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
