@@ -1,6 +1,4 @@
 django==1.4.1
 psycopg2
 dj-database-url
-django-reversion
-django-cms
-south
+mezzanine
