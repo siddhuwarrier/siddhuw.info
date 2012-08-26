@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}404{% endblock %}
+{% block title %}
+    404: This page could not be found
+{% endblock %}
+{% block byline %}I'm afraid this page has been eaten by a marauding pack of vicious llamas.{% endblock %}
+
+{% block main %}
+    <div class="marketing">
+        <div class="row">
+            <div class="span4">
+                <h2>They're Mendacious.</h2>
+                <p>
+                    They make you see 404 errors where there actually aren't any.
+                </p>
+            </div>
+            <div class="span4">
+                <h2>They're Vicious.</h2>
+                <p>
+                    They sometimes causes 500 errors in my code.
+                </p>
+            </div>
+            <div class="span4">
+                <h2>They're Everywhere!</h2>
+                <p>
+                    Don't say I didn't warn you. Everytime you see a 404 error, you now know it's them!
+                </p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
