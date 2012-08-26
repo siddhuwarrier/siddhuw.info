@@ -2,7 +2,6 @@ import dj_database_url
 import os
 # Django settings for website project.
 
-VERSION = 0.1.0 #www.semver.org
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
