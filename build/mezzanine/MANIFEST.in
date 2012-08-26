@@ -1,5 +1,0 @@
-include CHANGELOG LICENSE README.rst
-recursive-include docs *
-recursive-exclude docs/build *
-recursive-include mezzanine *
-recursive-exclude */project_template/static *
