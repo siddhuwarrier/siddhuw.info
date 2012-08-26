@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}/css/siddhuw.css">
+
+    <title>{% block meta_title %}{% endblock %} | Siddhu Warrier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block extrahead %}
+    {% endblock %}
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Siddhu Warrier</a>
+        </div>
+    </div>
+</div>
+
+<div class="container headline">
+    <div class="marketing">
+        <h1>{% block title %}{% endblock %}</h1>
+
+        <p class="marketing-byline">{% block byline %}{% endblock %}</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            {% block main %}{% endblock %}
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

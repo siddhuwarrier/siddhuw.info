@@ -8,5 +8,7 @@ dist.idea
 .idea_modules
 .settings
 django-env
-*.pyc
+*.py[cdo]
 *.swp
+.idea
+.idea/*
