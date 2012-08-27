@@ -5,8 +5,21 @@ body, p {
     font-weight: 400;
 }
 
+h1,h2,h3 {
+    color: #344251;
+    /* text-shadow: 1px 1px 0px #bad3ed;*/
+}
 h1 {
     margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-weight: normal;
+
+}
+
+.big {
+    font-size: 16px;
 }
 
 .headline {
@@ -14,16 +27,15 @@ h1 {
 }
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
-    color: #ffffff;
+    color: #aaa;
 }
 
 /* From http://twitter.github.com/bootstrap/ */
-.marketing {
-    text-align: center;
+.cv, .marketing {
     color: #5a5a5a;
 }
 
-.marketing h1 {
+.cv h1, .marketing h1 {
     margin: 0 0 10px;
     font-size: 60px;
     font-weight: 200;
@@ -31,11 +43,15 @@ h1 {
     letter-spacing: -1px;
 }
 
-.marketing h2 {
+.cv h1, .marketing h2 {
     font-weight: 200;
     margin-bottom: 5px;
 }
 
+.cv p {
+    font-size: 13px;
+    line-height: 1.5;
+}
 .marketing p {
     font-size: 16px;
     line-height: 1.5;
