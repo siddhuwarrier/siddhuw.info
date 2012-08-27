@@ -1,4 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+@import url('font-awesome.css');
 
 body, p {
     font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -9,12 +10,16 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-weight: normal;
+}
+
 .headline {
     margin-top: 60px;
 }
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
-    color: #ffffff;
+    color: #aaa;
 }
 
 /* From http://twitter.github.com/bootstrap/ */

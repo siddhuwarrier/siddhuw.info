@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}/css/siddhuw.css">
 
+
     <title>{% block meta_title %}{% endblock %} | Siddhu Warrier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,9 +26,12 @@
             </button>
             <a class="brand" href="./">Siddhu Warrier</a>
             <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="active">
+                <ul class="nav" id="menubar">
+                    <li id="home" class="active">
                         <a href="./">Home</a>
+                    </li>
+                    <li id="professional" class="">
+                        <a href="professional">Professional</a>
                     </li>
                     <li class="">
                         <a href="http://blog.siddhuw.info" target="_blank">Blog</a>
@@ -39,7 +43,7 @@
 </div>
 
 <div class="container headline">
-    <div class="marketing">
+    <div class="marketing span9">
         <h1>{% block title %}{% endblock %}</h1>
 
         <p class="marketing-byline">{% block byline %}{% endblock %}</p>
@@ -57,5 +61,6 @@
 <!-- JQuery and bootstrap goodness! -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/siddhuw.info.js"></script>
 </body>
 </html>

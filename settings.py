@@ -2,7 +2,7 @@ import dj_database_url
 import os
 # Django settings for website project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

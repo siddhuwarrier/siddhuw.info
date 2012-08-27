@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Professional" %}{% endblock %}
+{% block title %}
+    Curriculum Vitae
+{% endblock %}
+{% block byline %}A short professional introduction{% endblock %}
+
+{% block main %}
+    <div class="row" xmlns="http://www.w3.org/1999/html">
+        <div class="span9">
+            <h2>Profile</h2>
+        </div>
+        <div class="span3 pull-right">
+            <h2>Contact</h2>
+            <p></p><a href="http://bit.ly/PMe1e5" target="_blank"><i class="icon-map-marker"></a></i>London, UK</p>
+            <p><i class="icon-eye-open"></i> firstname AT this-domain</p>
+
+            <a href="Curriculum_Vitae.pdf" class="btn btn-primary noPrint" id="downBtn"><i class="icon-download icon-white"></i>
+                Download</a>
+        </div>
+    </div>
+
+
+{% endblock %}
