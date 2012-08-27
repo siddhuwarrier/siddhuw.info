@@ -13,9 +13,6 @@ urlpatterns = patterns('',
     url(r'^professional$', TemplateView.as_view(template_name="professional.html")),
 )
 
-if not settings.DEBUG:
-    urlpatterns += patterns('',
-        url('^static/(?P<path>.*)$', django.views.static.serve, {'document_root': settings.STATIC_ROOT ,'show_indexes': True}),
-    )
-else:
-    urlpatterns += staticfiles_urlpatterns()
+urlpatterns += patterns('',
+    url('^static/(?P<path>.*)$', django.views.static.serve, {'document_root': settings.STATIC_ROOT ,'show_indexes': True}),
+)

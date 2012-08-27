@@ -1,17 +1,25 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
-@import url('font-awesome.css');
 
 body, p {
     font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-weight: 400;
 }
 
+h1,h2,h3 {
+    color: #344251;
+    /* text-shadow: 1px 1px 0px #bad3ed;*/
+}
 h1 {
     margin-bottom: 20px;
 }
 
-h2 {
+h2, h3 {
     font-weight: normal;
+
+}
+
+.big {
+    font-size: 16px;
 }
 
 .headline {
@@ -23,12 +31,11 @@ h2 {
 }
 
 /* From http://twitter.github.com/bootstrap/ */
-.marketing {
-    text-align: center;
+.cv, .marketing {
     color: #5a5a5a;
 }
 
-.marketing h1 {
+.cv h1, .marketing h1 {
     margin: 0 0 10px;
     font-size: 60px;
     font-weight: 200;
@@ -36,11 +43,15 @@ h2 {
     letter-spacing: -1px;
 }
 
-.marketing h2 {
+.cv h1, .marketing h2 {
     font-weight: 200;
     margin-bottom: 5px;
 }
 
+.cv p {
+    font-size: 13px;
+    line-height: 1.5;
+}
 .marketing p {
     font-size: 16px;
     line-height: 1.5;
