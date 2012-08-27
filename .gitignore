@@ -12,3 +12,4 @@ django-env
 *.swp
 .idea
 .idea/*
+static/
