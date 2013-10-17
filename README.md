@@ -38,7 +38,7 @@ This is the source code for my website. It's hosted on Heroku for absolutely not
 
 The application is served using [Heroku](http://www.heroku.com), the first inanimate object (that isn't a motorbike or made by Apple) that I've fallen in love with. I reserve the rights to deploy to my Heroku domains for obvious reasons.:-)
 
-There are three environments available:
+There are two environments available:
  
 * [Staging](http://staging.siddhuw.info): This environment is updated regularly as I work on developing this wee website. Shadows the `develop` or `feature` branch on github.
 * [Production](http://www.siddhuw.info): This environment is updated far less regularly, and shadows the master branch on github.
