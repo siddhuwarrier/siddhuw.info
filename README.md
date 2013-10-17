@@ -25,7 +25,7 @@ This is the source code for my website. It's hosted on Heroku for absolutely not
 		
 * Set up the database
 	
-		$ ./manage.py createdb
+		$ ./manage.py syncdb
 		
 * Check everything works
 
