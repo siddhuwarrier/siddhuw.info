@@ -13,3 +13,5 @@ django-env
 .idea
 .idea/*
 venv
+django-env
+django-env/
