@@ -17,6 +17,10 @@ resource "cloudflare_pages_project" "site" {
       path_includes                  = ["pages/*"]
     }
   }
+
+  lifecycle {
+    ignore_changes = [latest_deployment]
+  }
 }
 
 resource "cloudflare_pages_domain" "site" {
@@ -42,5 +46,5 @@ resource "cloudflare_dns_record" "site_www_alias" {
   content = "${cloudflare_pages_project.site.name}.pages.dev"
   proxied = true
   ttl     = 1
-  comment = "Points ${var.domain} to Cloudflare Pages"
+  comment = "Points www.${var.domain} to Cloudflare Pages"
 }
