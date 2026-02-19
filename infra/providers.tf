@@ -10,5 +10,5 @@ terraform {
 }
 
 provider "cloudflare" {
-  # pulls API token from env var CLOUDFLARE_API_TOKEN
+  api_token = var.cloudflare_api_token
 }
