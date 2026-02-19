@@ -1,5 +1,13 @@
 terraform {
-  required_version = ">= 1.5.0"
+  required_version = ">= 1.14.0"
+
+  cloud {
+    organization = "siddhuw" # change this if you're forking my setup
+
+    workspaces {
+      name = "siddhuw-info" # change this if you're forking my setup
+    }
+  }
 
   required_providers {
     cloudflare = {
