@@ -29,6 +29,12 @@ resource "cloudflare_pages_domain" "site" {
   name         = var.domain
 }
 
+resource "cloudflare_pages_domain" "site_www" {
+  account_id   = var.cloudflare_account_id
+  project_name = cloudflare_pages_project.site.name
+  name         = "www.${var.domain}"
+}
+
 resource "cloudflare_dns_record" "site" {
   zone_id = var.cloudflare_zone_id
   name    = var.domain
@@ -39,7 +45,7 @@ resource "cloudflare_dns_record" "site" {
   comment = "Points ${var.domain} to Cloudflare Pages"
 }
 
-resource "cloudflare_dns_record" "site_www_alias" {
+resource "cloudflare_dns_record" "site_www" {
   zone_id = var.cloudflare_zone_id
   name    = "www.${var.domain}"
   type    = "CNAME"
