@@ -13,8 +13,8 @@ resource "cloudflare_pages_project" "site" {
       owner                         = "siddhuwarrier"
       repo_name                     = "siddhuw.info"
       production_branch             = var.pages_production_branch
-      deployments_enabled           = true
       production_deployments_enabled = true
+      path_includes                  = ["pages/*"]
     }
   }
 }
@@ -28,6 +28,16 @@ resource "cloudflare_pages_domain" "site" {
 resource "cloudflare_dns_record" "site" {
   zone_id = var.cloudflare_zone_id
   name    = var.domain
+  type    = "CNAME"
+  content = "${cloudflare_pages_project.site.name}.pages.dev"
+  proxied = true
+  ttl     = 1
+  comment = "Points ${var.domain} to Cloudflare Pages"
+}
+
+resource "cloudflare_dns_record" "site" {
+  zone_id = var.cloudflare_zone_id
+  name    = "www.${var.domain}"
   type    = "CNAME"
   content = "${cloudflare_pages_project.site.name}.pages.dev"
   proxied = true
