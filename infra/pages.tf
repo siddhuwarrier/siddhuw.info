@@ -35,7 +35,7 @@ resource "cloudflare_dns_record" "site" {
   comment = "Points ${var.domain} to Cloudflare Pages"
 }
 
-resource "cloudflare_dns_record" "site" {
+resource "cloudflare_dns_record" "site_www_alias" {
   zone_id = var.cloudflare_zone_id
   name    = "www.${var.domain}"
   type    = "CNAME"
