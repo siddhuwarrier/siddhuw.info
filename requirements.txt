@@ -1,4 +1,0 @@
-django==1.4.1
-psycopg2
-dj-database-url
-gunicorn
