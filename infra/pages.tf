@@ -6,6 +6,17 @@ resource "cloudflare_pages_project" "site" {
   build_config = {
     root_dir = "pages"
   }
+
+  source = {
+    type = "github"
+    config = {
+      owner                         = "siddhuwarrier"
+      repo_name                     = "siddhuw.info"
+      production_branch             = var.pages_production_branch
+      deployments_enabled           = true
+      production_deployments_enabled = true
+    }
+  }
 }
 
 resource "cloudflare_pages_domain" "site" {
