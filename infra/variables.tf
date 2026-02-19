@@ -1,7 +1,7 @@
 variable "cloudflare_api_token" {
   description = "My Cloudflare API token"
-  type = string
-  sensitive = true
+  type        = string
+  sensitive   = true
 }
 
 variable "cloudflare_account_id" {
@@ -19,10 +19,10 @@ variable "domain" {
 
 variable "site_name" {
   description = "The name of the Cloudflare pages site you want to create"
-  default = "siddhuw"
+  default     = "siddhuw"
 }
 
 variable "pages_production_branch" {
   description = "The branch where the Cloudflare pages are located"
-  default = "master"
+  default     = "master"
 }

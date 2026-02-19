@@ -11,7 +11,7 @@ resource "cloudflare_pages_project" "site" {
 resource "cloudflare_pages_domain" "site" {
   account_id   = var.cloudflare_account_id
   project_name = cloudflare_pages_project.site.name
-  domain       = var.domain
+  name         = var.domain
 }
 
 resource "cloudflare_dns_record" "site" {
