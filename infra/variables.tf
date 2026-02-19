@@ -7,3 +7,22 @@ variable "cloudflare_api_token" {
 variable "cloudflare_account_id" {
   description = "My Cloudflare account ID"
 }
+
+variable "cloudflare_zone_id" {
+  description = "Cloudflare zone ID for siddhuw.info"
+}
+
+variable "domain" {
+  description = "The domain name"
+  default     = "siddhuw.info"
+}
+
+variable "site_name" {
+  description = "The name of the Cloudflare pages site you want to create"
+  default = "siddhuw"
+}
+
+variable "pages_production_branch" {
+  description = "The branch where the Cloudflare pages are located"
+  default = "master"
+}
