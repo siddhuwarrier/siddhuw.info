@@ -10,7 +10,30 @@ const { messages } = Astro.props;
 
 <main class="mx-auto w-full max-w-6xl px-6 py-10 lg:px-12 lg:py-14">
   <section aria-labelledby="cv-title" class="space-y-5">
-    <h1 id="cv-title" class="text-4xl font-bold tracking-tight sm:text-5xl">{messages.cv.heading}</h1>
-    <p class="max-w-4xl text-lg leading-relaxed text-base-content/80">{messages.cv.body}</p>
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <h1 id="cv-title" class="text-4xl font-bold tracking-tight sm:text-5xl">{messages.cv.heading}</h1>
+      <a
+        href="https://assets.siddhuw.info/siddhu_warrier_cv.pdf"
+        download
+        class="btn btn-primary btn-sm gap-2"
+      >
+        <i class="fa-solid fa-download"></i>
+        {messages.cv.downloadLabel}
+      </a>
+    </div>
+    <object
+      data="https://assets.siddhuw.info/siddhu_warrier_cv.pdf"
+      type="application/pdf"
+      class="h-[80vh] w-full rounded-lg border border-base-300"
+    >
+      <div class="flex flex-col items-center justify-center gap-4 py-20 text-base-content/60">
+        <i class="fa-solid fa-file-pdf text-4xl"></i>
+        <p>{messages.cv.pdfFallback}</p>
+        <a href="https://assets.siddhuw.info/siddhu_warrier_cv.pdf" download class="btn btn-primary btn-sm gap-2">
+          <i class="fa-solid fa-download"></i>
+          {messages.cv.downloadLabel}
+        </a>
+      </div>
+    </object>
   </section>
 </main>

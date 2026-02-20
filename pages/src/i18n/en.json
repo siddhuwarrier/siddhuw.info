@@ -49,13 +49,14 @@
     "whatIDoBodyOutro": "firewalling-as-a-service to their customers, and am responsible for the API-first automation and programmability toolchains that support it."
   },
   "contact": {
-    "heading": "Contact me",
+    "heading": "Coming soon",
     "emailLabel": "Email",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn"
   },
   "cv": {
     "heading": "CV",
-    "body": "A concise CV section can go here. You can later replace this with a link to a downloadable PDF and a brief summary of your experience."
+    "downloadLabel": "Download PDF",
+    "pdfFallback": "Your browser doesn't support embedded PDFs."
   }
 }

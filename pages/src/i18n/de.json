@@ -49,13 +49,14 @@
     "whatIDoBodyOutro": "aufbaue. Außerdem verantworte ich API-first-Automation und Programmierbarkeits-Toolchains dafür."
   },
   "contact": {
-    "heading": "Kontakt",
+    "heading": "Demnächst verfügbar",
     "emailLabel": "E-Mail",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn"
   },
   "cv": {
     "heading": "Lebenslauf",
-    "body": "Hier kann ein kurzer Lebenslauf-Abschnitt stehen. Später kannst du ihn durch einen Link zu einer herunterladbaren PDF und eine kurze Zusammenfassung deiner Erfahrung ersetzen."
+    "downloadLabel": "PDF herunterladen",
+    "pdfFallback": "Ihr Browser unterstützt keine eingebetteten PDFs."
   }
 }
