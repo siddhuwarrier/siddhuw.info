@@ -1,0 +1,34 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Sidebar from "@/components/Sidebar.astro";
+import type { PageId } from "@/features/navigation/nav-items";
+import { defaultTheme } from "@/config/theme";
+import type { Locale } from "@/i18n";
+import "@/styles/tailwind.css";
+
+type Props = {
+  title: string;
+  description: string;
+  activePage: PageId;
+  locale: Locale;
+};
+
+const { title, description, activePage, locale } = Astro.props;
+---
+
+<!doctype html>
+<html lang={locale} data-theme={defaultTheme}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <Sidebar activePage={activePage} locale={locale}>
+      <slot />
+    </Sidebar>
+  </body>
+</html>

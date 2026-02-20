@@ -1,0 +1,150 @@
+---
+import { profileLinks } from "@/config/profile";
+import { getMessages, languageNames, locales, localizedPath, type Locale } from "@/i18n";
+import { navItemClass, navItems, type PageId } from "@/features/navigation/nav-items";
+
+type Props = {
+  activePage: PageId;
+  locale: Locale;
+};
+
+const { activePage, locale } = Astro.props;
+const messages = getMessages(locale);
+---
+
+<div class="drawer lg:drawer-open">
+  <input id="site-drawer" type="checkbox" class="drawer-toggle" />
+
+  <div class="drawer-content">
+    <div class="sticky top-0 z-20 border-b border-base-300/70 bg-base-100/80 backdrop-blur lg:hidden">
+      <div class="flex items-center justify-between gap-3 px-4 py-3">
+        <label for="site-drawer" class="btn btn-ghost btn-square" aria-label={messages.layout.openNavigation}>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </label>
+        <div class="flex items-center gap-3">
+          <p class="text-sm font-semibold tracking-wide">{messages.profileName}</p>
+          <a
+            href={profileLinks.github}
+            class="btn btn-ghost btn-xs btn-circle"
+            aria-label={messages.layout.githubProfile}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="fa-brands fa-github text-sm"></i>
+          </a>
+          <a
+            href={profileLinks.linkedin}
+            class="btn btn-ghost btn-xs btn-circle"
+            aria-label={messages.layout.linkedinProfile}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="fa-brands fa-linkedin text-sm"></i>
+          </a>
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-outline btn-xs gap-2">
+              <i class="fa-solid fa-globe"></i>
+              {languageNames[locale]}
+              <i class="fa-solid fa-chevron-down text-[0.5rem]"></i>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu dropdown-content z-[50] mt-2 w-40 rounded-box border border-base-300 bg-base-100 p-2 shadow-lg"
+            >
+              {
+                locales.map((itemLocale) => (
+                  <li>
+                    <a
+                      href={localizedPath(itemLocale, activePage)}
+                      class={itemLocale === locale ? "active font-semibold" : ""}
+                    >
+                      {languageNames[itemLocale]}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="hidden border-b border-base-300/70 bg-base-100 lg:block">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-12 py-4">
+        <h1 class="text-2xl font-bold tracking-tight">{messages.profileName}</h1>
+        <div class="flex items-center gap-2">
+          <a
+            href={profileLinks.github}
+            class="btn btn-ghost btn-sm"
+            aria-label={messages.layout.githubProfile}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span class="text-xs">{messages.contact.githubLabel}</span>
+          </a>
+          <a
+            href={profileLinks.linkedin}
+            class="btn btn-ghost btn-sm"
+            aria-label={messages.layout.linkedinProfile}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            <span class="text-xs">{messages.contact.linkedinLabel}</span>
+          </a>
+          <div class="ml-1 border-l border-base-300 pl-3">
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-outline btn-sm gap-2">
+                <i class="fa-solid fa-globe"></i>
+                {languageNames[locale]}
+                <i class="fa-solid fa-chevron-down text-[0.6rem]"></i>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu dropdown-content z-[50] mt-2 w-40 rounded-box border border-base-300 bg-base-100 p-2 shadow-lg"
+              >
+                {
+                  locales.map((itemLocale) => (
+                    <li>
+                      <a
+                        href={localizedPath(itemLocale, activePage)}
+                        class={itemLocale === locale ? "active font-semibold" : ""}
+                      >
+                        {languageNames[itemLocale]}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <slot />
+  </div>
+
+  <div class="drawer-side z-30">
+    <label for="site-drawer" aria-label={messages.layout.closeNavigation} class="drawer-overlay"></label>
+    <aside class="min-h-full w-72 border-r border-base-300 bg-base-100 p-4">
+      <p class="px-3 pb-4 pt-2 text-xs font-semibold uppercase tracking-wider text-base-content/60">
+        {messages.layout.navigationHeading}
+      </p>
+      <ul class="menu gap-1 p-0">
+        {
+          navItems.map((item) => (
+            <li>
+              <a href={localizedPath(locale, item.pageId)} class={navItemClass(item.pageId, activePage)}>
+                {messages.nav[item.pageId]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+  </div>
+</div>

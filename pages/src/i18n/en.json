@@ -1,0 +1,61 @@
+{
+  "localeTag": "en-GB",
+  "profileName": "Siddhu Warrier",
+  "nav": {
+    "home": "Home",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "layout": {
+    "openNavigation": "Open navigation",
+    "closeNavigation": "Close navigation",
+    "navigationHeading": "Navigation",
+    "githubProfile": "GitHub profile",
+    "linkedinProfile": "LinkedIn profile"
+  },
+  "pageMeta": {
+    "homeTitle": "About Me | siddhuw.info",
+    "homeDescription": "About Siddhu - personal website",
+    "contactTitle": "Contact | siddhuw.info",
+    "contactDescription": "Contact Siddhu - personal website",
+    "cvTitle": "CV | siddhuw.info",
+    "cvDescription": "CV of Siddhu - personal website"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "headingPrefix": "Hi, I'm",
+    "headingSuffix": ".",
+    "tagline": "Cricket tragic, long-suffering Gooner, nerd, engineering leader.",
+    "quickFactsAria": "Quick facts",
+    "basedInTitle": "Based in",
+    "basedInValue": "London",
+    "roleTitle": "Role",
+    "roleValue": "Principal Engineer/Engineering Director",
+    "roleDescription": "Cisco Secure Firewall",
+    "worriesTitle": "Worries about",
+    "worriesValue": "Arsenal",
+    "worriesDescription": "Liege of the one, the only Lord Bendtner",
+    "aboutAria": "About",
+    "shortVersionHeading": "The short version",
+    "shortVersionBody": "Hi, I'm Siddhu. As you can probably tell from my having bothered to create a personal website, I'm a bit of a nerd. I live in London, play cricket very badly, and waste far too much of my life worrying about Arsenal.",
+    "didYouKnow": "Did you know?",
+    "leagueWinPrefix": "It's been",
+    "leagueWinSuffix": "seconds since we won the league at White Hart Lane.",
+    "whatIDoHeading": "What I do",
+    "whatIDoBodyIntro": "I am a Principal Engineer/Director at",
+    "ciscoLinkLabel": "Cisco Secure Firewall",
+    "whatIDoBodyMiddle": ", where I lead multiple engineering teams across the UK and EU for Cisco Security Cloud Control's Firewall Manager (formerly known as CDO), delivering a coherent, automatable experience for",
+    "msspLinkLabel": "Managed Security Service Providers offering",
+    "whatIDoBodyOutro": "firewalling-as-a-service to their customers, and am responsible for the API-first automation and programmability toolchains that support it."
+  },
+  "contact": {
+    "heading": "Contact me",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn"
+  },
+  "cv": {
+    "heading": "CV",
+    "body": "A concise CV section can go here. You can later replace this with a link to a downloadable PDF and a brief summary of your experience."
+  }
+}

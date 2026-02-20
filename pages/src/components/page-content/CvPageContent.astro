@@ -1,0 +1,16 @@
+---
+import type { Messages } from "@/i18n";
+
+type Props = {
+  messages: Messages;
+};
+
+const { messages } = Astro.props;
+---
+
+<main class="mx-auto w-full max-w-6xl px-6 py-10 lg:px-12 lg:py-14">
+  <section aria-labelledby="cv-title" class="space-y-5">
+    <h1 id="cv-title" class="text-4xl font-bold tracking-tight sm:text-5xl">{messages.cv.heading}</h1>
+    <p class="max-w-4xl text-lg leading-relaxed text-base-content/80">{messages.cv.body}</p>
+  </section>
+</main>

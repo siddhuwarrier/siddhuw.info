@@ -1,0 +1,61 @@
+{
+  "localeTag": "de-DE",
+  "profileName": "Siddhu Warrier",
+  "nav": {
+    "home": "Start",
+    "contact": "Kontakt",
+    "cv": "Lebenslauf"
+  },
+  "layout": {
+    "openNavigation": "Navigation öffnen",
+    "closeNavigation": "Navigation schließen",
+    "navigationHeading": "Navigation",
+    "githubProfile": "GitHub-Profil",
+    "linkedinProfile": "LinkedIn-Profil"
+  },
+  "pageMeta": {
+    "homeTitle": "Über mich | siddhuw.info",
+    "homeDescription": "Über Siddhu - persönliche Website",
+    "contactTitle": "Kontakt | siddhuw.info",
+    "contactDescription": "Siddhu kontaktieren - persönliche Website",
+    "cvTitle": "Lebenslauf | siddhuw.info",
+    "cvDescription": "Lebenslauf von Siddhu - persönliche Website"
+  },
+  "home": {
+    "welcome": "Willkommen",
+    "headingPrefix": "Hi, ich bin",
+    "headingSuffix": ".",
+    "tagline": "Cricket-Fan, lang leidender Gooner, Nerd, Engineering-Leiter.",
+    "quickFactsAria": "Kurze Fakten",
+    "basedInTitle": "Standort",
+    "basedInValue": "London",
+    "roleTitle": "Rolle",
+    "roleValue": "Principal Engineer/Engineering Director",
+    "roleDescription": "Cisco Secure Firewall",
+    "worriesTitle": "Sorgt sich um",
+    "worriesValue": "Arsenal",
+    "worriesDescription": "Anhänger von Lord Bendtner",
+    "aboutAria": "Über mich",
+    "shortVersionHeading": "Kurzfassung",
+    "shortVersionBody": "Hi, ich bin Siddhu. Wie man wahrscheinlich an dieser persönlichen Website merkt, bin ich ziemlich nerdig. Ich lebe in London, spiele Cricket sehr schlecht und verbringe viel zu viel Zeit damit, mir Sorgen um Arsenal zu machen.",
+    "didYouKnow": "Schon gewusst?",
+    "leagueWinPrefix": "Seit unserem Ligatitel an der White Hart Lane sind",
+    "leagueWinSuffix": "Sekunden vergangen.",
+    "whatIDoHeading": "Was ich mache",
+    "whatIDoBodyIntro": "Ich bin Principal Engineer/Director bei",
+    "ciscoLinkLabel": "Cisco Secure Firewall",
+    "whatIDoBodyMiddle": ", wo ich mehrere Engineering-Teams in Großbritannien und der EU für den Firewall Manager von Cisco Security Cloud Control (früher CDO) leite und eine konsistente, automatisierbare Plattform für",
+    "msspLinkLabel": "Managed Security Service Providers",
+    "whatIDoBodyOutro": "aufbaue. Außerdem verantworte ich API-first-Automation und Programmierbarkeits-Toolchains dafür."
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "emailLabel": "E-Mail",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn"
+  },
+  "cv": {
+    "heading": "Lebenslauf",
+    "body": "Hier kann ein kurzer Lebenslauf-Abschnitt stehen. Später kannst du ihn durch einen Link zu einer herunterladbaren PDF und eine kurze Zusammenfassung deiner Erfahrung ersetzen."
+  }
+}

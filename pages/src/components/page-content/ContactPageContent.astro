@@ -1,0 +1,21 @@
+---
+import { profileEmail, profileLinks } from "@/config/profile";
+import type { Messages } from "@/i18n";
+
+type Props = {
+  messages: Messages;
+};
+
+const { messages } = Astro.props;
+---
+
+<main class="mx-auto w-full max-w-6xl px-6 py-10 lg:px-12 lg:py-14">
+  <section aria-labelledby="contact-me-title" class="space-y-5">
+    <h1 id="contact-me-title" class="text-4xl font-bold tracking-tight sm:text-5xl">{messages.contact.heading}</h1>
+    <ul class="menu w-full max-w-3xl rounded-box bg-base-100/60">
+      <li><a href={`mailto:${profileEmail}`}>{messages.contact.emailLabel}: {profileEmail}</a></li>
+      <li><a href={profileLinks.github}>{messages.contact.githubLabel}: {profileLinks.github}</a></li>
+      <li><a href={profileLinks.linkedin}>{messages.contact.linkedinLabel}: {profileLinks.linkedin}</a></li>
+    </ul>
+  </section>
+</main>

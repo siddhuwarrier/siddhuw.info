@@ -1,0 +1,148 @@
+---
+import type { Messages } from "@/i18n";
+
+type Props = {
+  messages: Messages;
+};
+
+const { messages } = Astro.props;
+---
+
+<main class="mx-auto w-full max-w-6xl px-6 py-10 lg:px-12 lg:py-14">
+  <section aria-labelledby="about-me-title" class="space-y-3 pb-2">
+    <p class="text-sm font-medium uppercase tracking-widest text-primary">{messages.home.welcome}</p>
+    <h1 id="about-me-title" class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+      {messages.home.headingPrefix}
+      <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+        >{messages.profileName}</span
+      >{messages.home.headingSuffix}
+    </h1>
+    <p class="max-w-2xl text-lg text-base-content/60">{messages.home.tagline}</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section aria-label={messages.home.quickFactsAria} class="py-2">
+    <div class="stats stats-vertical w-full shadow-sm lg:stats-horizontal">
+      <div class="stat">
+        <div class="stat-figure text-primary">
+          <i class="fa-solid fa-location-dot text-2xl"></i>
+        </div>
+        <div class="stat-title">{messages.home.basedInTitle}</div>
+        <div class="stat-value text-lg">{messages.home.basedInValue}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-figure text-secondary">
+          <i class="fa-solid fa-briefcase text-2xl"></i>
+        </div>
+        <div class="stat-title">{messages.home.roleTitle}</div>
+        <div class="stat-value text-lg">{messages.home.roleValue}</div>
+        <div class="stat-desc">{messages.home.roleDescription}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-figure text-accent">
+          <i class="fa-solid fa-futbol text-2xl"></i>
+        </div>
+        <div class="stat-title">{messages.home.worriesTitle}</div>
+        <div class="stat-value text-lg">{messages.home.worriesValue}</div>
+        <div class="stat-desc">{messages.home.worriesDescription}</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section aria-label={messages.home.aboutAria} class="grid gap-6 md:grid-cols-2">
+    <div class="card bg-base-100/60 shadow-md backdrop-blur">
+      <div class="card-body">
+        <h2 class="card-title text-primary">{messages.home.shortVersionHeading}</h2>
+        <p class="leading-relaxed text-base-content/80">{messages.home.shortVersionBody}</p>
+        <div class="mt-3 rounded-lg border border-primary/30 bg-primary/10 px-4 py-3">
+          <p class="text-sm leading-relaxed text-base-content/90">
+            <span class="badge badge-primary badge-sm mr-1 font-bold">{messages.home.didYouKnow}</span>
+            {messages.home.leagueWinPrefix}
+            <span
+              id="league-win-counter"
+              data-locale={messages.localeTag}
+              class="mx-1 font-mono font-semibold text-primary">...</span
+            >
+            {messages.home.leagueWinSuffix}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100/60 shadow-md backdrop-blur">
+      <div class="card-body">
+        <h2 class="card-title text-secondary">{messages.home.whatIDoHeading}</h2>
+        {
+          messages.home.whatIDoSegments ? (
+            <div class="space-y-3">
+              {messages.home.whatIDoSegments.map((segment) => {
+                const ciscoUrl =
+                  "https://www.cisco.com/c/en_uk/products/collateral/security/firesight-management-center/at-a-glance-c45-736624.html";
+                const msspUrl = "https://docs.defenseorchestrator.com/c-manage-multi-tenant-portal.html";
+                const parts = segment.split(/(\{ciscoLink\}|\{msspLink\})/);
+                return (
+                  <p class="leading-relaxed text-base-content/80">
+                    {parts.map((part) =>
+                      part === "{ciscoLink}" ? (
+                        <a href={ciscoUrl} target="_blank" class="link link-primary">
+                          {messages.home.ciscoLinkLabel}
+                        </a>
+                      ) : part === "{msspLink}" ? (
+                        <a href={msspUrl} target="_blank" class="link link-primary">
+                          {messages.home.msspLinkLabel}
+                        </a>
+                      ) : (
+                        part
+                      )
+                    )}
+                  </p>
+                );
+              })}
+            </div>
+          ) : (
+            <p class="leading-relaxed text-base-content/80">
+              {messages.home.whatIDoBodyIntro}
+              <a
+                href="https://www.cisco.com/c/en_uk/products/collateral/security/firesight-management-center/at-a-glance-c45-736624.html"
+                target="_blank"
+                class="link link-primary"
+              >
+                {messages.home.ciscoLinkLabel}
+              </a>
+              {messages.home.whatIDoBodyMiddle}
+              <a
+                href="https://docs.defenseorchestrator.com/c-manage-multi-tenant-portal.html"
+                target="_blank"
+                class="link link-primary"
+              >
+                {messages.home.msspLinkLabel}
+              </a>
+              {messages.home.whatIDoBodyOutro}
+            </p>
+          )
+        }
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  import { formatSeconds, secondsSinceLeagueWin } from "@/features/arsenal/league-win";
+
+  function update() {
+    const el = document.getElementById("league-win-counter");
+    if (el) {
+      const localeTag = el.dataset.locale ?? "en-GB";
+      el.textContent = formatSeconds(secondsSinceLeagueWin(), localeTag);
+    }
+  }
+
+  update();
+  setInterval(update, 1000);
+
+  document.addEventListener("astro:after-swap", () => {
+    update();
+  });
+</script>

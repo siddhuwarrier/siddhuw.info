@@ -1,0 +1,17 @@
+---
+import CvPageContent from "@/components/page-content/CvPageContent.astro";
+import { getMessages } from "@/i18n";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const locale = "en" as const;
+const messages = getMessages(locale);
+---
+
+<BaseLayout
+  title={messages.pageMeta.cvTitle}
+  description={messages.pageMeta.cvDescription}
+  activePage="cv"
+  locale={locale}
+>
+  <CvPageContent messages={messages} />
+</BaseLayout>

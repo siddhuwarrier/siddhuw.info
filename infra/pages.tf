@@ -4,15 +4,17 @@ resource "cloudflare_pages_project" "site" {
   production_branch = var.pages_production_branch
 
   build_config = {
-    root_dir = "pages"
+    build_command   = "npm install && npm run build"
+    destination_dir = "dist"
+    root_dir        = "pages"
   }
 
   source = {
     type = "github"
     config = {
-      owner                         = "siddhuwarrier"
-      repo_name                     = "siddhuw.info"
-      production_branch             = var.pages_production_branch
+      owner                          = "siddhuwarrier"
+      repo_name                      = "siddhuw.info"
+      production_branch              = var.pages_production_branch
       production_deployments_enabled = true
       path_includes                  = ["pages/*"]
     }

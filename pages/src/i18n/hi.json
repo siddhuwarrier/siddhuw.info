@@ -1,0 +1,65 @@
+{
+  "localeTag": "hi-IN",
+  "profileName": "सिद्धु वारियर",
+  "nav": {
+    "home": "होम",
+    "contact": "संपर्क",
+    "cv": "सीवी"
+  },
+  "layout": {
+    "openNavigation": "नेविगेशन खोलें",
+    "closeNavigation": "नेविगेशन बंद करें",
+    "navigationHeading": "नेविगेशन",
+    "githubProfile": "गिटहब प्रोफाइल",
+    "linkedinProfile": "लिंक्डइन प्रोफाइल"
+  },
+  "pageMeta": {
+    "homeTitle": "मेरे बारे में | siddhuw.info",
+    "homeDescription": "सिद्धु के बारे में - व्यक्तिगत वेबसाइट",
+    "contactTitle": "संपर्क | siddhuw.info",
+    "contactDescription": "सिद्धु से संपर्क - व्यक्तिगत वेबसाइट",
+    "cvTitle": "सीवी | siddhuw.info",
+    "cvDescription": "सिद्धु का सीवी - व्यक्तिगत वेबसाइट"
+  },
+  "home": {
+    "welcome": "स्वागत है",
+    "headingPrefix": "नमस्ते, मेरा नाम",
+    "headingSuffix": " है।",
+    "tagline": "क्रिकेट प्रेमी, आर्सेनल को लेकर हमेशा चिंतित, टेक-नर्ड, इंजीनियरिंग लीडर।",
+    "quickFactsAria": "संक्षिप्त जानकारी",
+    "basedInTitle": "स्थान",
+    "basedInValue": "लंदन",
+    "roleTitle": "भूमिका",
+    "roleValue": "प्रिंसिपल इंजीनियर / इंजीनियरिंग डायरेक्टर",
+    "roleDescription": "Cisco Secure Firewall",
+    "worriesTitle": "चिंता का विषय",
+    "worriesValue": "आर्सेनल",
+    "worriesDescription": "एकमात्र लॉर्ड बेंडनर का अनुयायी",
+    "aboutAria": "परिचय",
+    "shortVersionHeading": "संक्षिप्त परिचय",
+    "shortVersionBody": "नमस्ते, मैं सिद्धु हूँ। जैसे कि आप शायद समझ ही गए होंगे कि मैंने अपनी खुद की पर्सनल वेबसाइट बना रखी है, तो मैं थोड़ा सा नर्ड टाइप हूँ। मैं लंदन में रहता हूँ, क्रिकेट बहुत ही खराब खेलता हूँ, और अपनी ज़िंदगी का बहुत ज़्यादा हिस्सा आर्सेनल की फिक्र करते हुए बर्बाद कर देता हूँ।",
+    "didYouKnow": "क्या आप जानते हैं?",
+    "leagueWinPrefix": "हमने व्हाइट हार्ट लेन में लीग जीती थी, उसके बाद से",
+    "leagueWinSuffix": "सेकंड बीत चुके हैं।",
+    "whatIDoHeading": "मैं क्या करता हूँ",
+    "whatIDoBodyIntro": "",
+    "ciscoLinkLabel": "Cisco Secure Firewall",
+    "whatIDoBodyMiddle": "",
+    "msspLinkLabel": "Managed Security Service Providers",
+    "whatIDoBodyOutro": "",
+    "whatIDoSegments": [
+      "मैं {ciscoLink} में प्रिंसिपल इंजीनियर/डायरेक्टर के पद पर काम करता हूँ, जहाँ मैं UK और EU में मौजूद कई इंजीनियरिंग टीमों की रहनुमाई करता हूँ। ये टीमें Security Cloud Control के फ़ायरवॉल मैनेजर (जिसे पहले CDO के नाम से जाना जाता था) पर काम करती हैं, जिसका मक़सद {msspLink} को अपने कस्टमर्स को फ़ायरवॉल-एज़-ए-सर्विस देने के लिए एक साफ़, मुन्नज़्ज़म और ऑटोमेट की हुई तजुर्बा देना है।",
+      "इसके अलावा, मैं API-first ऑटोमेशन और प्रोग्रामेबिलिटी के टूलचेन के लिए भी ज़िम्मेदार हूँ, जो इस पूरे निज़ाम को सपोर्ट करते हैं।"
+    ]
+  },
+  "contact": {
+    "heading": "मुझसे संपर्क करें",
+    "emailLabel": "ईमेल",
+    "githubLabel": "गिटहब",
+    "linkedinLabel": "लिंक्डइन"
+  },
+  "cv": {
+    "heading": "सीवी",
+    "body": "यहां आपका संक्षिप्त सीवी सेक्शन हो सकता है। बाद में आप इसे डाउनलोड करने योग्य पीडीएफ लिंक और अपने अनुभव के सारांश से बदल सकते हैं।"
+  }
+}
