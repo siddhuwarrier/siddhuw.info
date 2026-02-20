@@ -12,11 +12,7 @@ const { messages } = Astro.props;
   <section aria-labelledby="cv-title" class="space-y-5">
     <div class="flex flex-wrap items-center justify-between gap-4">
       <h1 id="cv-title" class="text-4xl font-bold tracking-tight sm:text-5xl">{messages.cv.heading}</h1>
-      <a
-        href="https://assets.siddhuw.info/siddhu_warrier_cv.pdf"
-        download
-        class="btn btn-primary btn-sm gap-2"
-      >
+      <a href="https://assets.siddhuw.info/siddhu_warrier_cv.pdf" download class="btn btn-primary btn-sm gap-2">
         <i class="fa-solid fa-download"></i>
         {messages.cv.downloadLabel}
       </a>

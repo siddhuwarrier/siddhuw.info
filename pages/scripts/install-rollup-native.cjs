@@ -17,7 +17,9 @@ try {
   console.log(`${pkg} not found, installing manually...`);
   try {
     execSync(`npm pack ${pkg} --pack-destination=.`, { cwd: path.join(__dirname, ".."), stdio: "pipe" });
-    const tarball = fs.readdirSync(path.join(__dirname, "..")).find((f) => f.startsWith("rollup-rollup-") && f.endsWith(".tgz"));
+    const tarball = fs
+      .readdirSync(path.join(__dirname, ".."))
+      .find((f) => f.startsWith("rollup-rollup-") && f.endsWith(".tgz"));
     if (tarball) {
       const tarballPath = path.join(__dirname, "..", tarball);
       fs.mkdirSync(dest, { recursive: true });
