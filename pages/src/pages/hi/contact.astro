@@ -1,0 +1,17 @@
+---
+import ContactPageContent from "@/components/page-content/ContactPageContent.astro";
+import { getMessages } from "@/i18n";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const locale = "hi" as const;
+const messages = getMessages(locale);
+---
+
+<BaseLayout
+  title={messages.pageMeta.contactTitle}
+  description={messages.pageMeta.contactDescription}
+  activePage="contact"
+  locale={locale}
+>
+  <ContactPageContent messages={messages} />
+</BaseLayout>

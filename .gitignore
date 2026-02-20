@@ -15,3 +15,9 @@ django-env
 venv
 django-env
 django-env/
+node_modules/
+dist/
+pages/node_modules/
+pages/dist/
+.astro/
+pages/.astro/

@@ -1,0 +1,17 @@
+---
+import HomePageContent from "@/components/page-content/HomePageContent.astro";
+import { getMessages } from "@/i18n";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const locale = "hi" as const;
+const messages = getMessages(locale);
+---
+
+<BaseLayout
+  title={messages.pageMeta.homeTitle}
+  description={messages.pageMeta.homeDescription}
+  activePage="home"
+  locale={locale}
+>
+  <HomePageContent messages={messages} />
+</BaseLayout>
