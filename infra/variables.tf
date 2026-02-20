@@ -29,7 +29,7 @@ variable "pages_production_branch" {
 
 variable "storage_bucket_name" {
   description = "Bucket to put stuff into"
-  default     = "siddhuw.assets"
+  default     = "siddhuw-info"
 }
 
 variable "storage_bucket_location" {
