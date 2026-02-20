@@ -34,7 +34,7 @@ variable "storage_bucket_name" {
 
 variable "storage_bucket_location" {
   description = "Bucket location"
-  default     = "WEUR"
+  default     = "weur"
   validation {
     condition = contains(["apac", "eeur", "enam", "weur", "wnam", "oc"], var.storage_bucket_location)
     error_message = "Valid value is one of the following: apac, eeur, enam, weur, wnam, oc."
