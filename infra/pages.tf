@@ -21,7 +21,9 @@ resource "cloudflare_pages_project" "site" {
   }
 
   lifecycle {
-    ignore_changes = [latest_deployment]
+    # TEMPORARY: work around Cloudflare provider v5 bug with latest_deployment sensitive attribute.
+    # Revert to [latest_deployment] after successful apply.
+    ignore_changes = all
   }
 }
 
