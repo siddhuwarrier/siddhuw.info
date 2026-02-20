@@ -5,9 +5,9 @@ resource "cloudflare_r2_bucket" "cloudflare-bucket" {
 }
 
 resource "cloudflare_r2_custom_domain" "assets" {
-  account_id = var.cloudflare_account_id
-  zone_id = var.cloudflare_zone_id
-  bucket_name  = cloudflare_r2_bucket.cloudflare-bucket.name
-  domain     = "assets.${var.domain}"
-  enabled = true
+  account_id  = var.cloudflare_account_id
+  zone_id     = var.cloudflare_zone_id
+  bucket_name = cloudflare_r2_bucket.cloudflare-bucket.name
+  domain      = "assets.${var.domain}"
+  enabled     = true
 }

@@ -11,7 +11,8 @@
     "test:watch": "vitest",
     "lint": "eslint . && prettier --check .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "postinstall": "node scripts/install-rollup-native.cjs"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
