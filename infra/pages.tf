@@ -3,12 +3,6 @@ resource "cloudflare_pages_project" "site" {
   name              = var.site_name
   production_branch = var.pages_production_branch
 
-  build_config = {
-    build_command   = "npm install && npm run build"
-    destination_dir = "dist"
-    root_dir        = "pages"
-  }
-
   source = {
     type = "github"
     config = {
@@ -21,9 +15,7 @@ resource "cloudflare_pages_project" "site" {
   }
 
   lifecycle {
-    # TEMPORARY: work around Cloudflare provider v5 bug with latest_deployment sensitive attribute.
-    # Revert to [latest_deployment] after successful apply.
-    ignore_changes = all
+    ignore_changes = [latest_deployment]
   }
 }
 
