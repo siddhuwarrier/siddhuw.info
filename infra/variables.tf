@@ -26,3 +26,17 @@ variable "pages_production_branch" {
   description = "The branch where the Cloudflare pages are located"
   default     = "master"
 }
+
+variable "storage_bucket_name" {
+  description = "Bucket to put stuff into"
+  default     = "siddhuw.assets"
+}
+
+variable "storage_bucket_location" {
+  description = "Bucket location"
+  default     = "WEUR"
+  validation {
+    condition = contains(["apac", "eeur", "enam", "weur", "wnam", "oc"], var.storage_bucket_location)
+    error_message = "Valid value is one of the following: apac, eeur, enam, weur, wnam, oc."
+  }
+}
