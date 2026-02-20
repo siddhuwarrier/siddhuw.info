@@ -29,18 +29,12 @@ resource "cloudflare_pages_domain" "site" {
   account_id   = var.cloudflare_account_id
   project_name = cloudflare_pages_project.site.name
   name         = var.domain
-  lifecycle {
-    ignore_changes = [latest_deployment, canonical_deployment]
-  }
 }
 
 resource "cloudflare_pages_domain" "site_www" {
   account_id   = var.cloudflare_account_id
   project_name = cloudflare_pages_project.site.name
   name         = "www.${var.domain}"
-  lifecycle {
-    ignore_changes = [latest_deployment, canonical_deployment]
-  }
 }
 
 resource "cloudflare_dns_record" "site" {
