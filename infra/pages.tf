@@ -3,6 +3,12 @@ resource "cloudflare_pages_project" "site" {
   name              = var.site_name
   production_branch = var.pages_production_branch
 
+  build_config = {
+    build_command   = "npm install && npm run build"
+    destination_dir = "dist"
+    root_dir        = "pages"
+  }
+
   source = {
     type = "github"
     config = {
