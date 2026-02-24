@@ -23,7 +23,7 @@ const { messages } = Astro.props;
   <div class="divider"></div>
 
   <section aria-label={messages.home.quickFactsAria} class="py-2">
-    <div class="stats stats-vertical w-full shadow-sm lg:stats-horizontal">
+    <div class="stats stats-vertical w-full shadow-sm lg:stats-horizontal lg:[grid-template-columns:1fr_1fr]">
       <div class="stat">
         <div class="stat-figure text-primary">
           <i class="fa-solid fa-location-dot text-2xl"></i>
@@ -38,14 +38,6 @@ const { messages } = Astro.props;
         <div class="stat-title">{messages.home.roleTitle}</div>
         <div class="stat-value text-lg">{messages.home.roleValue}</div>
         <div class="stat-desc">{messages.home.roleDescription}</div>
-      </div>
-      <div class="stat">
-        <div class="stat-figure text-accent">
-          <i class="fa-solid fa-futbol text-2xl"></i>
-        </div>
-        <div class="stat-title">{messages.home.worriesTitle}</div>
-        <div class="stat-value text-lg">{messages.home.worriesValue}</div>
-        <div class="stat-desc">{messages.home.worriesDescription}</div>
       </div>
     </div>
   </section>
