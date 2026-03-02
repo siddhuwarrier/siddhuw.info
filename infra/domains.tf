@@ -51,7 +51,7 @@ resource "cloudflare_dns_record" "txt1_siddhuw_uk" {
   zone_id  = var.cloudflare_alt_zone_id
   name     = "siddhuw.uk"
   type     = "TXT"
-  content = "v=DKIM1;h=sha256;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsGktQd5oOOoQ92evBaIu5zkwsw5ls3FtF33leN52H1VXBD8SGrys9kvb3RuaA3T6FDE62FyYXtKc7RA/8lnnR6gHTReCHtVlmqWZqz2Rfjo0fm59I6Zsqcuh23bhaLnqtiesPfvGbKkFlop+igdthTnienVyBmgzujj1Px06+EKlsoYVKfJBLjg4n0gZdjkZxMSO1yLtODPew+yfC37Ceuo8UzQRPfT90tCFPgnWv7SoMAm0Z6CFBangd4cuB/mkLjV+n8Og5Nhwgofs2XYYTtwnhvI6HvD7bjR3b85YpuhIG2TjIMRfNXXL8g9sf4nSK2zlVlgpv14SXudpW9xlEQIDAQAB"
+  content = "\"v=DKIM1;h=sha256;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsGktQd5oOOoQ92evBaIu5zkwsw5ls3FtF33leN52H1VXBD8SGrys9kvb3RuaA3T6FDE62FyYXtKc7RA/8lnnR6gHTReCHtVlmqWZqz2Rfjo0fm59I6Zsqcuh23bhaLnqtiesPfvGbKkFlop+igdthTnienVyBmgzujj1Px06+EKlsoYVKfJBLjg4n0gZdjkZxMSO1yLtODPew+yfC37Ceuo8UzQRPfT90tCFPgnWv7SoMAm0Z6CFBangd4cuB/mkLjV+n8Og5Nhwgofs2XYYTtwnhvI6HvD7bjR3b85YpuhIG2TjIMRfNXXL8g9sf4nSK2zlVlgpv14SXudpW9xlEQIDAQAB\""
   ttl = 1
 }
 
@@ -59,6 +59,6 @@ resource "cloudflare_dns_record" "txt2_siddhuw_uk" {
   zone_id  = var.cloudflare_alt_zone_id
   name     = "siddhuw.uk"
   type     = "TXT"
-  content  = "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  content  = "\"v=spf1 include:_spf.mx.cloudflare.net ~all\""
   ttl = 1
 }
