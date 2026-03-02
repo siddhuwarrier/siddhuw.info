@@ -49,10 +49,18 @@
     "whatIDoBodyOutro": "aufbaue. Außerdem verantworte ich API-first-Automation und Programmierbarkeits-Toolchains dafür."
   },
   "contact": {
-    "heading": "Demnächst verfügbar",
+    "heading": "Kontaktieren Sie mich",
     "emailLabel": "E-Mail",
     "githubLabel": "GitHub",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "formEmailLabel": "Ihre E-Mail-Adresse",
+    "formEmailPlaceholder": "name@beispiel.de",
+    "formMessageLabel": "Nachricht",
+    "formMessagePlaceholder": "Wie kann ich Ihnen helfen?",
+    "formSubmit": "Nachricht senden",
+    "formSubmitting": "Überprüfung…",
+    "formError": "Überprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "formSuccess": "Vielen Dank für Ihr Interesse! Der serverseitige E-Mail-Versand ist noch nicht implementiert — kommt bald."
   },
   "cv": {
     "heading": "Lebenslauf",

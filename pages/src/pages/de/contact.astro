@@ -1,5 +1,6 @@
 ---
 import ContactPageContent from "@/components/page-content/ContactPageContent.astro";
+import { turnstileSiteKey } from "@/config/turnstile";
 import { getMessages } from "@/i18n";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
@@ -13,5 +14,7 @@ const messages = getMessages(locale);
   activePage="contact"
   locale={locale}
 >
-  <ContactPageContent messages={messages} />
+  <link slot="head" rel="preconnect" href="https://challenges.cloudflare.com" />
+  <ContactPageContent messages={messages} turnstileSiteKey={turnstileSiteKey} />
+  <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </BaseLayout>

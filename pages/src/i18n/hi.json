@@ -53,10 +53,18 @@
     ]
   },
   "contact": {
-    "heading": "जल्द आ रहा है",
+    "heading": "मुझसे संपर्क करें",
     "emailLabel": "ईमेल",
     "githubLabel": "गिटहब",
-    "linkedinLabel": "लिंक्डइन"
+    "linkedinLabel": "लिंक्डइन",
+    "formEmailLabel": "आपका ईमेल पता",
+    "formEmailPlaceholder": "aap@example.com",
+    "formMessageLabel": "संदेश",
+    "formMessagePlaceholder": "मैं आपकी कैसे मदद कर सकता हूँ?",
+    "formSubmit": "संदेश भेजें",
+    "formSubmitting": "सत्यापन हो रहा है…",
+    "formError": "सत्यापन विफल। कृपया पुनः प्रयास करें।",
+    "formSuccess": "आपकी रुचि के लिए धन्यवाद! सर्वर-साइड ईमेल भेजना अभी लागू नहीं हुआ है — जल्द आ रहा है।"
   },
   "cv": {
     "heading": "सीवी",

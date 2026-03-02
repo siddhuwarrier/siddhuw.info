@@ -25,6 +25,7 @@ const { title, description, activePage, locale } = Astro.props;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <title>{title}</title>
     <ViewTransitions />
+    <slot name="head" />
   </head>
   <body class="min-h-screen bg-base-200">
     <Sidebar activePage={activePage} locale={locale}>

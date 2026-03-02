@@ -49,10 +49,18 @@
     "whatIDoBodyOutro": "firewalling-as-a-service to their customers, and am responsible for the API-first automation and programmability toolchains that support it."
   },
   "contact": {
-    "heading": "Coming soon",
+    "heading": "Contact me",
     "emailLabel": "Email",
     "githubLabel": "GitHub",
-    "linkedinLabel": "LinkedIn"
+    "linkedinLabel": "LinkedIn",
+    "formEmailLabel": "Your email address",
+    "formEmailPlaceholder": "you@example.com",
+    "formMessageLabel": "Message",
+    "formMessagePlaceholder": "How can I help you?",
+    "formSubmit": "Send message",
+    "formSubmitting": "Verifying…",
+    "formError": "Verification failed. Please try again.",
+    "formSuccess": "Thanks for your interest! Server-side email sending is not yet implemented — coming soon."
   },
   "cv": {
     "heading": "CV",

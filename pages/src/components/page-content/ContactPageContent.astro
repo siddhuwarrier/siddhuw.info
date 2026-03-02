@@ -4,9 +4,10 @@ import type { Messages } from "@/i18n";
 
 type Props = {
   messages: Messages;
+  turnstileSiteKey: string;
 };
 
-const { messages } = Astro.props;
+const { messages, turnstileSiteKey } = Astro.props;
 ---
 
 <main class="mx-auto w-full max-w-6xl px-6 py-10 lg:px-12 lg:py-14">
@@ -17,5 +18,66 @@ const { messages } = Astro.props;
       <li><a href={profileLinks.github}>{messages.contact.githubLabel}: {profileLinks.github}</a></li>
       <li><a href={profileLinks.linkedin}>{messages.contact.linkedinLabel}: {profileLinks.linkedin}</a></li>
     </ul> -->
+    <form
+      id="contact-form"
+      class="card w-full max-w-xl bg-base-100 shadow-xl"
+      data-sitekey={turnstileSiteKey}
+      data-submit-label={messages.contact.formSubmit}
+      data-submitting-label={messages.contact.formSubmitting}
+      data-error-label={messages.contact.formError}
+      data-success-label={messages.contact.formSuccess}
+    >
+      <div class="card-body gap-4">
+        <div class="form-control w-full">
+          <label class="label" for="contact-email">
+            <span class="label-text">{messages.contact.formEmailLabel}</span>
+          </label>
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            required
+            placeholder={messages.contact.formEmailPlaceholder}
+            class="input input-bordered w-full"
+          />
+        </div>
+
+        <div class="form-control w-full">
+          <label class="label" for="contact-message">
+            <span class="label-text">{messages.contact.formMessageLabel}</span>
+          </label>
+          <textarea
+            id="contact-message"
+            name="message"
+            required
+            rows="5"
+            placeholder={messages.contact.formMessagePlaceholder}
+            class="textarea textarea-bordered w-full"
+          ></textarea>
+        </div>
+
+        <div id="turnstile-container" class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
+
+        <p id="contact-error" class="text-error text-sm hidden"></p>
+
+        <div class="card-actions justify-end">
+          <button id="contact-submit" type="submit" class="btn btn-primary">
+            {messages.contact.formSubmit}
+          </button>
+        </div>
+      </div>
+    </form>
+    <div id="contact-success" class="alert alert-info w-full max-w-xl hidden" role="alert">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6 shrink-0 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <span id="contact-success-text"></span>
+    </div>
   </section>
 </main>
+
+<script>
+  import { initContactForm } from "@/features/contact/contact-form";
+  initContactForm();
+  document.addEventListener("astro:after-swap", initContactForm);
+</script>

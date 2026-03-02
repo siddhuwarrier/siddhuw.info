@@ -21,3 +21,4 @@ pages/node_modules/
 pages/dist/
 .astro/
 pages/.astro/
+**/.env

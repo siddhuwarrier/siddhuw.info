@@ -46,6 +46,32 @@ Run unit tests:
 npm test
 ```
 
+## Turnstile (Local Dev)
+
+The contact page uses a [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) widget.
+In production the real site key is injected via Cloudflare Pages environment variables.
+
+For local development, use Cloudflare's [dummy site keys](https://developers.cloudflare.com/turnstile/troubleshooting/testing/) which work on any domain including `localhost`:
+
+```bash
+# Always passes
+PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA
+
+# Always blocks
+PUBLIC_TURNSTILE_SITE_KEY=2x00000000000000000000AB
+
+# Forces interactive challenge
+PUBLIC_TURNSTILE_SITE_KEY=3x00000000000000000000FF
+```
+
+Create a `.env` file in the project root with one of the above:
+
+```bash
+echo 'PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA' > .env
+```
+
+Then start the dev server as usual with `npm run dev`.
+
 ## Pages
 
 - Home: `/`
