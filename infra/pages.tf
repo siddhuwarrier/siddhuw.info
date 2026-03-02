@@ -20,6 +20,19 @@ resource "cloudflare_pages_project" "site" {
     }
   }
 
+  deployment_configs = {
+    production = {
+      environment_variables = {
+        PUBLIC_TURNSTILE_SITE_KEY = cloudflare_turnstile_widget.site.sitekey
+      }
+    }
+    preview = {
+      environment_variables = {
+        PUBLIC_TURNSTILE_SITE_KEY = cloudflare_turnstile_widget.site.sitekey
+      }
+    }
+  }
+
   lifecycle {
     ignore_changes = [latest_deployment]
   }
