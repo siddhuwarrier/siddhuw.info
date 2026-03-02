@@ -12,9 +12,18 @@ variable "cloudflare_zone_id" {
   description = "Cloudflare zone ID for siddhuw.info"
 }
 
+variable "cloudflare_alt_zone_id" {
+  description = "Alt zone ID (for siddhuw.uk)"
+}
+
 variable "domain" {
   description = "The domain name"
   default     = "siddhuw.info"
+}
+
+variable "alt_domain" {
+  description = "Alternate domain name"
+  default = "siddhuw.uk"
 }
 
 variable "site_name" {
