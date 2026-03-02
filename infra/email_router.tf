@@ -3,7 +3,7 @@ locals {
 }
 resource "cloudflare_email_routing_dns" "example_email_routing_dns" {
   zone_id = var.cloudflare_zone_id
-  name    = cloudflare_pages_domain.site.name
+  name    = "mail.cf.${var.domain}"
 }
 
 resource "cloudflare_email_routing_address" "example_email_routing_address" {
