@@ -40,3 +40,9 @@ variable "storage_bucket_location" {
     error_message = "Valid value is one of the following: apac, eeur, enam, weur, wnam, oc."
   }
 }
+
+variable "actual_email_address" {
+  description = "The actual e-mail address Cloudflare Email router should send my e-mail to"
+  type = string
+  sensitive = true
+}
