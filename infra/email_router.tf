@@ -8,7 +8,7 @@ resource "cloudflare_email_routing_dns" "example_email_routing_dns" {
 
 resource "cloudflare_email_routing_address" "example_email_routing_address" {
   account_id = var.cloudflare_account_id
-  email      = local.cloudflare_email_address
+  email      = var.actual_email_address
 }
 
 resource "cloudflare_email_routing_rule" "example_email_routing_rule" {
