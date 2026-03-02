@@ -49,23 +49,3 @@ resource "cloudflare_pages_domain" "site_www" {
   project_name = cloudflare_pages_project.site.name
   name         = "www.${var.domain}"
 }
-
-resource "cloudflare_dns_record" "site" {
-  zone_id = var.cloudflare_zone_id
-  name    = var.domain
-  type    = "CNAME"
-  content = "${cloudflare_pages_project.site.name}.pages.dev"
-  proxied = true
-  ttl     = 1
-  comment = "Points ${var.domain} to Cloudflare Pages"
-}
-
-resource "cloudflare_dns_record" "site_www" {
-  zone_id = var.cloudflare_zone_id
-  name    = "www.${var.domain}"
-  type    = "CNAME"
-  content = "${cloudflare_pages_project.site.name}.pages.dev"
-  proxied = true
-  ttl     = 1
-  comment = "Points www.${var.domain} to Cloudflare Pages"
-}
