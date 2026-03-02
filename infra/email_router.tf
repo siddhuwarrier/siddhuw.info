@@ -1,9 +1,9 @@
 locals {
-  cloudflare_email_address = "hi@siddhuw.uk"
+  cloudflare_email_address = "hi@mail.siddhuw.uk"
 }
 resource "cloudflare_email_routing_dns" "example_email_routing_dns" {
   zone_id = var.cloudflare_alt_zone_id
-  name    = var.alt_domain
+  name    = "mail.${var.alt_domain}"
 }
 
 resource "cloudflare_email_routing_address" "example_email_routing_address" {
