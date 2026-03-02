@@ -12,7 +12,7 @@ resource "cloudflare_email_routing_address" "example_email_routing_address" {
 }
 
 resource "cloudflare_email_routing_rule" "example_email_routing_rule" {
-  zone_id = var.cloudflare_zone_id
+  zone_id = var.cloudflare_alt_zone_id
   actions = [{
     type  = "forward"
     value = [var.actual_email_address]
