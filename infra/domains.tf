@@ -59,6 +59,6 @@ resource "cloudflare_dns_record" "txt2_siddhuw_uk" {
   zone_id  = var.cloudflare_alt_zone_id
   name     = "siddhuw.uk"
   type     = "TXT"
-  content  = "\"v=spf1 include:_spf.mx.cloudf"
+  content  = "v=spf1 include:_spf.mx.cloudflare.net ~all"
   ttl = 1
 }
