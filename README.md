@@ -8,6 +8,7 @@ My personal website, built with [Astro](https://astro.build/) and hosted on [Clo
 |-----------|---------|-----------|
 | `pages/`  | Astro frontend — templates, components, i18n, styles, and tests | [pages/README.md](pages/README.md) |
 | `infra/`  | Terraform configuration for Cloudflare resources (Pages project, DNS, R2 bucket, custom domains) | [infra/README.md](infra/README.md) |
+| `workers/` | Cloudflare Workers | [workers/README.md](workers/README.md) |
 
 ## CI/CD pipeline
 
