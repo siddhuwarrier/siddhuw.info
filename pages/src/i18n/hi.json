@@ -25,7 +25,7 @@
     "welcome": "स्वागत है",
     "headingPrefix": "नमस्ते, मेरा नाम",
     "headingSuffix": " है।",
-    "tagline": "क्रिकेट प्रेमी, आर्सेनल को लेकर हमेशा चिंतित, टेक-नर्ड, इंजीनियरिंग लीडर।",
+    "tagline": "क्रिकेट प्रेमी, टेक-नर्ड, इंजीनियरिंग लीडर।",
     "quickFactsAria": "संक्षिप्त जानकारी",
     "basedInTitle": "स्थान",
     "basedInValue": "लंदन",
@@ -54,6 +54,8 @@
   },
   "contact": {
     "heading": "मुझसे संपर्क करें",
+    "introPrefix": "आप मुझसे ",
+    "introSuffix": " पर ईमेल करके या यह फ़ॉर्म भरकर संपर्क कर सकते हैं।",
     "emailLabel": "ईमेल",
     "githubLabel": "गिटहब",
     "linkedinLabel": "लिंक्डइन",

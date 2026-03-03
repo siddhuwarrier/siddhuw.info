@@ -1,3 +1,22 @@
+function revealEmail(): void {
+  const introEl = document.getElementById("contact-intro");
+  const linkEl = document.getElementById("contact-email-link") as HTMLAnchorElement | null;
+  const placeholderEl = document.getElementById("contact-email-placeholder");
+  if (!introEl || !linkEl || !placeholderEl) return;
+
+  const email = introEl.dataset.email;
+  if (!email) return;
+
+  linkEl.href = `mailto:${email}`;
+  linkEl.textContent = email;
+  linkEl.classList.remove("hidden");
+  placeholderEl.classList.add("hidden");
+}
+
+export function onTurnstileSuccess(): void {
+  revealEmail();
+}
+
 export function initContactForm(): void {
   const form = document.getElementById("contact-form") as HTMLFormElement | null;
   if (!form) return;

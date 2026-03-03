@@ -25,7 +25,7 @@
     "welcome": "Welcome",
     "headingPrefix": "Hi, I'm",
     "headingSuffix": ".",
-    "tagline": "Cricket tragic, long-suffering Arsenal supporter, nerd, engineering leader.",
+    "tagline": "Cricket tragic, nerd, engineering leader.",
     "quickFactsAria": "Quick facts",
     "basedInTitle": "Based in",
     "basedInValue": "London",
@@ -50,6 +50,8 @@
   },
   "contact": {
     "heading": "Contact me",
+    "introPrefix": "You can contact me by either e-mailing ",
+    "introSuffix": " or filling out this form.",
     "emailLabel": "Email",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",

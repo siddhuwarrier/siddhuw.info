@@ -13,11 +13,9 @@ const { messages, turnstileSiteKey } = Astro.props;
 <main class="mx-auto w-full max-w-6xl px-6 py-10 lg:px-12 lg:py-14">
   <section aria-labelledby="contact-me-title" class="space-y-5">
     <h1 id="contact-me-title" class="text-4xl font-bold tracking-tight sm:text-5xl">{messages.contact.heading}</h1>
-    <!-- <ul class="menu w-full max-w-3xl rounded-box bg-base-100/60">
-      <li><a href={`mailto:${profileEmail}`}>{messages.contact.emailLabel}: {profileEmail}</a></li>
-      <li><a href={profileLinks.github}>{messages.contact.githubLabel}: {profileLinks.github}</a></li>
-      <li><a href={profileLinks.linkedin}>{messages.contact.linkedinLabel}: {profileLinks.linkedin}</a></li>
-    </ul> -->
+    <p id="contact-intro" class="max-w-xl text-base-content/80" data-email="hi@mail.siddhuw.uk">
+      {messages.contact.introPrefix}<a id="contact-email-link" class="link link-primary hidden" href=""></a><span id="contact-email-placeholder" class="italic opacity-60">…</span>{messages.contact.introSuffix}
+    </p>
     <form
       id="contact-form"
       class="card w-full max-w-xl bg-base-100 shadow-xl"
@@ -56,7 +54,7 @@ const { messages, turnstileSiteKey } = Astro.props;
           ></textarea>
         </div>
 
-        <div id="turnstile-container" class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark"></div>
+        <div id="turnstile-container" class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark" data-callback="onTurnstileSuccess"></div>
 
         <p id="contact-error" class="text-error text-sm hidden"></p>
 
@@ -77,7 +75,11 @@ const { messages, turnstileSiteKey } = Astro.props;
 </main>
 
 <script>
-  import { initContactForm } from "@/features/contact/contact-form";
+  import { initContactForm, onTurnstileSuccess } from "@/features/contact/contact-form";
+  (window as unknown as Record<string, unknown>).onTurnstileSuccess = onTurnstileSuccess;
   initContactForm();
-  document.addEventListener("astro:after-swap", initContactForm);
+  document.addEventListener("astro:after-swap", () => {
+    (window as unknown as Record<string, unknown>).onTurnstileSuccess = onTurnstileSuccess;
+    initContactForm();
+  });
 </script>

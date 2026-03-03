@@ -25,7 +25,7 @@
     "welcome": "Willkommen",
     "headingPrefix": "Hi, ich bin",
     "headingSuffix": ".",
-    "tagline": "Cricket-Fan, lang leidender Arsenal Fan, Nerd, Engineering-Leiter.",
+    "tagline": "Cricket-Fan, Nerd, Engineering-Leiter.",
     "quickFactsAria": "Kurze Fakten",
     "basedInTitle": "Standort",
     "basedInValue": "London",
@@ -50,6 +50,8 @@
   },
   "contact": {
     "heading": "Kontaktieren Sie mich",
+    "introPrefix": "Sie können mich per E-Mail an ",
+    "introSuffix": " erreichen oder dieses Formular ausfüllen.",
     "emailLabel": "E-Mail",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
