@@ -10,9 +10,7 @@
 	"compatibility_flags": [
 		"python_workers"
 	],
-	"observability": {
-		"enabled": true
-	}
+	// observability is managed by Terraform (infra/workers.tf) — do not set here
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

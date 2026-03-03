@@ -1,0 +1,28 @@
+name: Deploy Workers
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "workers/**"
+
+jobs:
+  deploy-email-validation-worker:
+    name: Deploy email-validation-worker
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workers/email-validation-worker
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - run: uv sync
+
+      - name: Deploy
+        run: uv run pywrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
