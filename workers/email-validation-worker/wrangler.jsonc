@@ -16,7 +16,7 @@
 	"send_email": [
 		{
 			"name": "cloudflare_emailer",
-			"destination_address": "siddhu@siddhuw.info"
+			"destination_address": "me@siddhuw.info"
 		}
 	],
 	"ratelimits": [
