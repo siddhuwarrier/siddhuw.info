@@ -1,7 +1,7 @@
 locals {
   send_email_service = {
     service_name = "email-validation-worker"
-    hostname     = "api.${var.domain}"
+    hostname     = "emails.workers.${var.domain}"
   }
 }
 resource "cloudflare_worker" "send_email_service" {
