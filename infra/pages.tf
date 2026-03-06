@@ -28,7 +28,8 @@ resource "cloudflare_pages_project" "site" {
     }
     preview = {
       environment_variables = {
-        PUBLIC_TURNSTILE_SITE_KEY = cloudflare_turnstile_widget.site.sitekey
+        PUBLIC_TURNSTILE_SITE_KEY           = cloudflare_turnstile_widget.site.sitekey
+        PUBLIC_SEND_EMAIL_SERVICE_URL       = local.send_email_service.hostname
       }
     }
   }

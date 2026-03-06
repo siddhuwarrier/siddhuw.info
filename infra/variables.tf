@@ -23,7 +23,7 @@ variable "domain" {
 
 variable "alt_domain" {
   description = "Alternate domain name"
-  default = "siddhuw.uk"
+  default     = "siddhuw.uk"
 }
 
 variable "site_name" {
@@ -52,6 +52,6 @@ variable "storage_bucket_location" {
 
 variable "actual_email_address" {
   description = "The actual e-mail address Cloudflare Email router should send my e-mail to"
-  type = string
-  sensitive = true
+  type        = string
+  sensitive   = true
 }
