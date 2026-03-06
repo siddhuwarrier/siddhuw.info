@@ -26,7 +26,7 @@ flowchart LR
     worker1 ==> emailRouting
     emailRouting ==> inbox
 
- subgraph ciFlow["🚀 CI Flow — siddhuw.info"]
+ subgraph ciFlow["🚀 CI/CD Flow — siddhuw.info"]
     direction LR
         repo1["🐙 github.com/siddhuwarrier/<br>siddhuw.info"]
         pagesChange{"📄 Change to<br>pages/*?"}
@@ -45,7 +45,7 @@ flowchart LR
     workersChange -->|Yes| ghActions1
     ghActions1 ==> cfWorkers
 
- subgraph cvFlow["📝 CI Flow — curriculum-vitae"]
+ subgraph cvFlow["📝 CI/CD Flow — curriculum-vitae"]
     direction LR
         repo2["🐙 github.com/siddhuwarrier/<br>curriculum-vitae"]
         ghActions2["🤖 GitHub Actions"]
