@@ -84,9 +84,3 @@ Build a personal website that is fast, easy to maintain, and free to host.
 - 2026-02-20 1020Z: Replaced HTML-string renderers with Astro page, layout, and component templates.
 - 2026-02-20 1125Z: Styling moved to Tailwind + DaisyUI only, with default theme set to Dracula.
 - 2026-03-06 0838Z: Added Architecture page with Mermaid diagram (client-rendered via mermaid npm package).
-
-## 14) Open Questions
-
-- What exact sections should appear on the About page?
-- Which theme should be the default?
-- Which APIs should be first in the future phase?
