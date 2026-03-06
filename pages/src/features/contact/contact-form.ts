@@ -1,3 +1,8 @@
+declare const turnstile: {
+  render: (container: string | HTMLElement, options: Record<string, unknown>) => string;
+  remove: (widgetId: string) => void;
+};
+
 function revealEmail(): void {
   const introEl = document.getElementById("contact-intro");
   const linkEl = document.getElementById("contact-email-link") as HTMLAnchorElement | null;
@@ -13,8 +18,36 @@ function revealEmail(): void {
   placeholderEl.classList.add("hidden");
 }
 
-export function onTurnstileSuccess(): void {
-  revealEmail();
+let currentWidgetId: string | null = null;
+
+function waitForTurnstile(): Promise<void> {
+  if (typeof turnstile !== "undefined") return Promise.resolve();
+  return new Promise((resolve) => {
+    const interval = setInterval(() => {
+      if (typeof turnstile !== "undefined") {
+        clearInterval(interval);
+        resolve();
+      }
+    }, 50);
+  });
+}
+
+async function renderTurnstile(sitekey: string): Promise<void> {
+  const container = document.getElementById("turnstile-container");
+  if (!container || !sitekey) return;
+
+  await waitForTurnstile();
+
+  if (currentWidgetId !== null) {
+    turnstile.remove(currentWidgetId);
+    currentWidgetId = null;
+  }
+
+  currentWidgetId = turnstile.render(container, {
+    sitekey,
+    theme: "dark",
+    callback: () => revealEmail(),
+  });
 }
 
 interface FormElements {
@@ -84,6 +117,9 @@ export function initContactForm(): void {
   if (!els) return;
 
   const { form, submitBtn, errorEl, successEl, successTextEl } = els;
+
+  const sitekey = form.dataset.sitekey ?? "";
+  renderTurnstile(sitekey);
   const errorLabel = form.dataset.errorLabel ?? "Verification failed. Please try again.";
   const successLabel = form.dataset.successLabel ?? "Thanks for your interest! Server-side email sending is not yet implemented — coming soon.";
 

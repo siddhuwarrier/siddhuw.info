@@ -54,7 +54,7 @@ const { messages, turnstileSiteKey } = Astro.props;
           ></textarea>
         </div>
 
-        <div id="turnstile-container" class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="dark" data-callback="onTurnstileSuccess"></div>
+        <div id="turnstile-container"></div>
 
         <p id="contact-error" class="text-error text-sm hidden"></p>
 
@@ -75,11 +75,9 @@ const { messages, turnstileSiteKey } = Astro.props;
 </main>
 
 <script>
-  import { initContactForm, onTurnstileSuccess } from "@/features/contact/contact-form";
-  (window as unknown as Record<string, unknown>).onTurnstileSuccess = onTurnstileSuccess;
+  import { initContactForm } from "@/features/contact/contact-form";
   initContactForm();
   document.addEventListener("astro:after-swap", () => {
-    (window as unknown as Record<string, unknown>).onTurnstileSuccess = onTurnstileSuccess;
     initContactForm();
   });
 </script>

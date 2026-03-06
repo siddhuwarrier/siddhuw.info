@@ -25,6 +25,8 @@ const { title, description, activePage, locale } = Astro.props;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <title>{title}</title>
     <ViewTransitions />
+    <link rel="preconnect" href="https://challenges.cloudflare.com" />
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <slot name="head" />
   </head>
   <body class="min-h-screen bg-base-200">

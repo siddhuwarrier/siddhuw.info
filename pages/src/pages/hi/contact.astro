@@ -14,7 +14,5 @@ const messages = getMessages(locale);
   activePage="contact"
   locale={locale}
 >
-  <link slot="head" rel="preconnect" href="https://challenges.cloudflare.com" />
   <ContactPageContent messages={messages} turnstileSiteKey={turnstileSiteKey} />
-  <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </BaseLayout>
