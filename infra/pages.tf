@@ -22,14 +22,27 @@ resource "cloudflare_pages_project" "site" {
 
   deployment_configs = {
     production = {
-      environment_variables = {
-        PUBLIC_TURNSTILE_SITE_KEY = cloudflare_turnstile_widget.site.sitekey
+      env_vars = {
+        PUBLIC_TURNSTILE_SITE_KEY = {
+          type  = "plain_text"
+          value = cloudflare_turnstile_widget.site.sitekey
+        }
+        PUBLIC_SEND_EMAIL_SERVICE_URL = {
+          type  = "plain_text"
+          value = "https://${local.send_email_service.hostname}"
+        }
       }
     }
     preview = {
-      environment_variables = {
-        PUBLIC_TURNSTILE_SITE_KEY           = cloudflare_turnstile_widget.site.sitekey
-        PUBLIC_SEND_EMAIL_SERVICE_URL       = local.send_email_service.hostname
+      env_vars = {
+        PUBLIC_TURNSTILE_SITE_KEY = {
+          type  = "plain_text"
+          value = cloudflare_turnstile_widget.site.sitekey
+        }
+        PUBLIC_SEND_EMAIL_SERVICE_URL = {
+          type  = "plain_text"
+          value = "https://${local.send_email_service.hostname}"
+        }
       }
     }
   }
