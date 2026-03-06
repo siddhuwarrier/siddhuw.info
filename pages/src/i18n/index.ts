@@ -28,7 +28,7 @@ export const languageNames: Record<Locale, string> = {
   de: "Deutsch"
 };
 
-export const localizedPath = (locale: Locale, pageId: "home" | "contact" | "cv"): string => {
+export const localizedPath = (locale: Locale, pageId: "home" | "contact" | "cv" | "architecture"): string => {
   const basePath = pageId === "home" ? "/" : `/${pageId}`;
   if (locale === defaultLocale) {
     return basePath;

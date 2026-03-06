@@ -121,7 +121,7 @@ export function initContactForm(): void {
   const sitekey = form.dataset.sitekey ?? "";
   renderTurnstile(sitekey);
   const errorLabel = form.dataset.errorLabel ?? "Verification failed. Please try again.";
-  const successLabel = form.dataset.successLabel ?? "Thanks for your interest! Server-side email sending is not yet implemented — coming soon.";
+  const successLabel = form.dataset.successLabel ?? "Thanks for your interest! An e-mail's been sent to me using a Cloudflare worker, and I'll get back to you as soon as I see it!";
 
   form.addEventListener("submit", async (e: SubmitEvent) => {
     e.preventDefault();

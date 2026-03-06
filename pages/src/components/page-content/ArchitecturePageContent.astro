@@ -1,0 +1,30 @@
+---
+import Mermaid from "@/components/Mermaid.astro";
+import type { Messages } from "@/i18n";
+import architectureChart from "@/assets/architecture.mmd?raw";
+
+type Props = {
+  messages: Messages;
+};
+
+const { messages } = Astro.props;
+---
+
+<main class="mx-auto w-full max-w-6xl px-6 py-10 lg:px-12 lg:py-14">
+  <section aria-labelledby="architecture-title" class="space-y-5">
+    <h1 id="architecture-title" class="text-4xl font-bold tracking-tight sm:text-5xl">
+      {messages.architecture.heading}
+    </h1>
+    <p class="text-base-content/70">{messages.architecture.description}</p>
+    <a
+      href="https://github.com/siddhuwarrier/siddhuw.info/blob/main/pages/src/assets/architecture.mmd"
+      class="btn btn-outline btn-sm gap-2"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <i class="fa-brands fa-github"></i>
+      {messages.architecture.viewSource}
+    </a>
+    <Mermaid chart={architectureChart} />
+  </section>
+</main>

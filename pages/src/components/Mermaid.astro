@@ -1,0 +1,27 @@
+---
+interface Props {
+  chart: string;
+}
+const { chart } = Astro.props;
+---
+
+<div class="mermaid-container overflow-x-auto my-8 p-6">
+  <pre class="mermaid">{chart}</pre>
+</div>
+
+<script>
+  import mermaid from "mermaid";
+
+  function initMermaid() {
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "dark",
+      securityLevel: "loose",
+    });
+    mermaid.run({ querySelector: ".mermaid" });
+  }
+
+  initMermaid();
+
+  document.addEventListener("astro:after-swap", initMermaid);
+</script>

@@ -83,6 +83,7 @@ Build a personal website that is fast, easy to maintain, and free to host.
 - 2026-02-20 0935Z: Added npm toolchain with Vite + TypeScript + Vitest to avoid manual JS duplication.
 - 2026-02-20 1020Z: Replaced HTML-string renderers with Astro page, layout, and component templates.
 - 2026-02-20 1125Z: Styling moved to Tailwind + DaisyUI only, with default theme set to Dracula.
+- 2026-03-06 0838Z: Added Architecture page with Mermaid diagram (client-rendered via mermaid npm package).
 
 ## 14) Open Questions
 

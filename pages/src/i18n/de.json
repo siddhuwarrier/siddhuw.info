@@ -4,7 +4,8 @@
   "nav": {
     "home": "Start",
     "contact": "Kontakt",
-    "cv": "Lebenslauf"
+    "cv": "Lebenslauf",
+    "architecture": "Architektur"
   },
   "layout": {
     "openNavigation": "Navigation öffnen",
@@ -19,7 +20,9 @@
     "contactTitle": "Kontakt | siddhuw.info",
     "contactDescription": "Siddhu kontaktieren - persönliche Website",
     "cvTitle": "Lebenslauf | siddhuw.info",
-    "cvDescription": "Lebenslauf von Siddhu - persönliche Website"
+    "cvDescription": "Lebenslauf von Siddhu - persönliche Website",
+    "architectureTitle": "Architektur | siddhuw.info",
+    "architectureDescription": "Architektur von siddhuw.info"
   },
   "home": {
     "welcome": "Willkommen",
@@ -62,11 +65,16 @@
     "formSubmit": "Nachricht senden",
     "formSubmitting": "Überprüfung…",
     "formError": "Überprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
-    "formSuccess": "Vielen Dank für Ihr Interesse! Der serverseitige E-Mail-Versand ist noch nicht implementiert — kommt bald."
+    "formSuccess": "Vielen Dank für Ihr Interesse! Eine E-Mail wurde über einen Cloudflare Worker an mich gesendet, und ich melde mich, sobald ich sie sehe!"
   },
   "cv": {
     "heading": "Lebenslauf",
     "downloadLabel": "PDF herunterladen",
     "pdfFallback": "Ihr Browser unterstützt keine eingebetteten PDFs."
+  },
+  "architecture": {
+    "heading": "Architektur",
+    "description": "Wie diese Website gebaut und bereitgestellt wird.",
+    "viewSource": "Diagrammquelle auf GitHub ansehen"
   }
 }

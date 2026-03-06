@@ -4,7 +4,8 @@
   "nav": {
     "home": "होम",
     "contact": "संपर्क",
-    "cv": "सीवी"
+    "cv": "सीवी",
+    "architecture": "आर्किटेक्चर"
   },
   "layout": {
     "openNavigation": "नेविगेशन खोलें",
@@ -19,7 +20,9 @@
     "contactTitle": "संपर्क | siddhuw.info",
     "contactDescription": "सिद्धु से संपर्क - व्यक्तिगत वेबसाइट",
     "cvTitle": "सीवी | siddhuw.info",
-    "cvDescription": "सिद्धु का सीवी - व्यक्तिगत वेबसाइट"
+    "cvDescription": "सिद्धु का सीवी - व्यक्तिगत वेबसाइट",
+    "architectureTitle": "आर्किटेक्चर | siddhuw.info",
+    "architectureDescription": "siddhuw.info की आर्किटेक्चर"
   },
   "home": {
     "welcome": "स्वागत है",
@@ -66,11 +69,16 @@
     "formSubmit": "संदेश भेजें",
     "formSubmitting": "सत्यापन हो रहा है…",
     "formError": "सत्यापन विफल। कृपया पुनः प्रयास करें।",
-    "formSuccess": "आपकी रुचि के लिए धन्यवाद! सर्वर-साइड ईमेल भेजना अभी लागू नहीं हुआ है — जल्द आ रहा है।"
+    "formSuccess": "आपकी रुचि के लिए धन्यवाद! एक Cloudflare worker के ज़रिए मुझे ईमेल भेज दिया गया है, और जैसे ही मैं इसे देखूँगा, आपको जवाब दूँगा!"
   },
   "cv": {
     "heading": "सीवी",
     "downloadLabel": "PDF डाउनलोड करें",
     "pdfFallback": "आपका ब्राउज़र एम्बेडेड PDF को सपोर्ट नहीं करता।"
+  },
+  "architecture": {
+    "heading": "आर्किटेक्चर",
+    "description": "यह साइट कैसे बनी और डिप्लॉय हुई है।",
+    "viewSource": "GitHub पर डायग्राम सोर्स देखें"
   }
 }

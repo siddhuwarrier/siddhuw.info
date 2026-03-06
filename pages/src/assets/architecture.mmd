@@ -1,0 +1,81 @@
+---
+config:
+  theme: neo-dark
+  flowchart:
+    padding: 20
+    subGraphTitleMargin:
+      top: 10
+      bottom: 10
+    nodeSpacing: 30
+    rankSpacing: 50
+---
+flowchart LR
+ subgraph contactForm["🌐 Contact Form Architecture"]
+    direction LR
+        user1["🧑 User"]
+        cf1["☁️ Cloudflare Pages<br>(siddhuw.info)"]
+        worker1["⚙️ Cloudflare Worker<br>(email-service.siddhuw.info)"]
+        turnstile["🛡️ Turnstile"]
+        emailRouting["📨 Cloudflare Email Router"]
+        inbox(["📬 E-mail Inbox"])
+  end
+    user1 ==> cf1
+    cf1 <-.->|validate| turnstile
+    cf1 ==>|POST /contact| worker1
+    worker1 <-.->|validate| turnstile
+    worker1 ==> emailRouting
+    emailRouting ==> inbox
+
+ subgraph ciFlow["🚀 CI Flow — siddhuw.info"]
+    direction LR
+        repo1["🐙 github.com/siddhuwarrier/<br>siddhuw.info"]
+        pagesChange{"📄 Change to<br>pages/*?"}
+        infraChange{"🏗️ Change to<br>infra/*?"}
+        workersChange{"⚙️ Change to<br>workers/*?"}
+        cfPages["☁️ Cloudflare Pages"]
+        hcpTerraform["🟣 HCP Terraform<br>terraform.io"]
+        cfInfra["☁️ Cloudflare"]
+        ghActions1["🤖 GitHub Actions"]
+        cfWorkers["☁️ Cloudflare"]
+  end
+    repo1 ==> pagesChange & infraChange & workersChange
+    pagesChange -->|Yes| cfPages
+    infraChange -->|Yes| hcpTerraform
+    hcpTerraform ==> cfInfra
+    workersChange -->|Yes| ghActions1
+    ghActions1 ==> cfWorkers
+
+ subgraph cvFlow["📝 CI Flow — curriculum-vitae"]
+    direction LR
+        repo2["🐙 github.com/siddhuwarrier/<br>curriculum-vitae"]
+        ghActions2["🤖 GitHub Actions"]
+        cfR2["🪣 Cloudflare R2<br>(assets.siddhuw.info/<br>siddhu_warrier_cv.pdf)"]
+        ghRelease["🏷️ GitHub Releases<br>(curriculum-vitae/releases)"]
+  end
+    repo2 ==> ghActions2
+    ghActions2 ==> cfR2
+    ghActions2 ==> ghRelease
+
+    style contactForm fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#eee
+    style ciFlow fill:#1a1a2e,stroke:#0f3460,stroke-width:2px,color:#eee
+    style cvFlow fill:#1a1a2e,stroke:#533483,stroke-width:2px,color:#eee
+
+    style user1 fill:#e94560,stroke:#e94560,color:#fff
+    style inbox fill:#e94560,stroke:#e94560,color:#fff
+    style repo1 fill:#0f3460,stroke:#0f3460,color:#fff
+    style repo2 fill:#533483,stroke:#533483,color:#fff
+
+    click cf1 "https://siddhuw.info" _blank
+    click worker1 "https://email-service.siddhuw.info" _blank
+    click turnstile "https://developers.cloudflare.com/turnstile/" _blank
+    click emailRouting "https://developers.cloudflare.com/email-routing/" _blank
+    click repo1 "https://github.com/siddhuwarrier/siddhuw.info" _blank
+    click cfPages "https://pages.cloudflare.com/" _blank
+    click hcpTerraform "https://app.terraform.io" _blank
+    click cfInfra "https://dash.cloudflare.com" _blank
+    click ghActions1 "https://github.com/siddhuwarrier/siddhuw.info/actions" _blank
+    click cfWorkers "https://developers.cloudflare.com/workers/" _blank
+    click repo2 "https://github.com/siddhuwarrier/curriculum-vitae" _blank
+    click ghActions2 "https://github.com/siddhuwarrier/curriculum-vitae/actions" _blank
+    click cfR2 "https://assets.siddhuw.info/siddhu_warrier_cv.pdf" _blank
+    click ghRelease "https://github.com/siddhuwarrier/curriculum-vitae/releases" _blank

@@ -4,7 +4,8 @@
   "nav": {
     "home": "Home",
     "contact": "Contact",
-    "cv": "CV"
+    "cv": "CV",
+    "architecture": "Architecture"
   },
   "layout": {
     "openNavigation": "Open navigation",
@@ -19,7 +20,9 @@
     "contactTitle": "Contact | siddhuw.info",
     "contactDescription": "Contact Siddhu - personal website",
     "cvTitle": "CV | siddhuw.info",
-    "cvDescription": "CV of Siddhu - personal website"
+    "cvDescription": "CV of Siddhu - personal website",
+    "architectureTitle": "Architecture | siddhuw.info",
+    "architectureDescription": "Architecture of siddhuw.info"
   },
   "home": {
     "welcome": "Welcome",
@@ -62,11 +65,16 @@
     "formSubmit": "Send message",
     "formSubmitting": "Verifying…",
     "formError": "Verification failed. Please try again.",
-    "formSuccess": "Thanks for your interest! Server-side email sending is not yet implemented — coming soon."
+    "formSuccess": "Thanks for your interest! An e-mail's been sent to me using a Cloudflare worker, and I'll get back to you as soon as I see it!"
   },
   "cv": {
     "heading": "CV",
     "downloadLabel": "Download PDF",
     "pdfFallback": "Your browser doesn't support embedded PDFs."
+  },
+  "architecture": {
+    "heading": "Architecture",
+    "description": "How this site is built and deployed.",
+    "viewSource": "View diagram source on GitHub"
   }
 }
