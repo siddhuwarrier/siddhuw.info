@@ -16,7 +16,12 @@ export async function handleContact(request: Request, env: Env): Promise<Respons
 		return new Response("Turnstile validation failed", { status: 403 });
 	}
 
-	await sendContactEmail(body, env);
+	try {
+		await sendContactEmail(body, env);
+	} catch (error) {
+		const message = error instanceof Error ? error.message : "Unknown error";
+		return Response.json({ status: "error", message }, { status: 500 });
+	}
 
 	return Response.json({
 		status: "success",

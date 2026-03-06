@@ -18,7 +18,7 @@ export async function sendContactEmail(body: ContactFormBody, env: Env): Promise
 	// Send email
 	const message = new EmailMessage(
 		"hi@mail.siddhuw.uk",
-		"siddhu@siddhuw.info",
+		env.DESTINATION_ADDRESS,
 		msg.asRaw(),
 	);
 	await env.cloudflare_emailer.send(message);
