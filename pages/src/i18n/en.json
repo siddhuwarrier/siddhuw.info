@@ -47,9 +47,9 @@
     "whatIDoHeading": "What I do",
     "whatIDoBodyIntro": "I am a Principal Engineer/Director at",
     "ciscoLinkLabel": "Cisco Secure Firewall",
-    "whatIDoBodyMiddle": ", where I lead multiple engineering teams across the UK and EU for Cisco Security Cloud Control's Firewall Manager (formerly known as CDO), delivering a coherent, automatable experience for",
-    "msspLinkLabel": "Managed Security Service Providers offering",
-    "whatIDoBodyOutro": "firewalling-as-a-service to their customers, and am responsible for the API-first automation and programmability toolchains that support it."
+    "whatIDoBodyMiddle": "I lead multiple engineering teams across the UK and EU for Cisco Security Cloud Control's Firewall Manager (formerly known as CDO). My primary focus is on delivering a coherent, automatable experience for",
+    "msspLinkLabel": "Managed Security Service Providers",
+    "whatIDoBodyOutro": "who offer firewalling-as-a-service to their customers. I am also responsible for the API-first automation and programmability toolchains for our cloud firewall offerings."
   },
   "contact": {
     "heading": "Contact me",
