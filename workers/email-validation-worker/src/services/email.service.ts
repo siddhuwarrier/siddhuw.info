@@ -8,7 +8,7 @@ export async function sendContactEmail(body: ContactFormBody, env: Env): Promise
 	// Create MIME message
 	const msg = createMimeMessage();
 	msg.setSender({ name: "Cloudflare E-mailer", addr: "hi@mail.siddhuw.uk" });
-	msg.setRecipient("siddhu@siddhuw.info");
+	msg.setRecipient(env.DESTINATION_ADDRESS);
 	msg.setSubject("New contact form submission");
 	msg.addMessage({
 		contentType: "text/plain",
