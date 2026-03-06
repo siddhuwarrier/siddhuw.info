@@ -5,14 +5,18 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "email-validation-worker",
-	"main": "src/entry.py",
+	"main": "src/index.ts",
 	"compatibility_date": "2026-03-03",
-	"compatibility_flags": [
-		"python_workers"
-	],
+	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
 		"enabled": true
-	}
+	},
+	"send_email": [
+		{
+			"name": "cloudflare_emailer",
+			"destination_address": "siddhu@siddhuw.info"
+		}
+	],
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

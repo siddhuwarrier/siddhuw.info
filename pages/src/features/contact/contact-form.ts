@@ -34,6 +34,8 @@ export function initContactForm(): void {
     e.preventDefault();
 
     const token = (form.querySelector<HTMLInputElement>("[name='cf-turnstile-response']"))?.value;
+    const email = (form.querySelector<HTMLInputElement>("#contact-email"))?.value;
+    const message = (form.querySelector<HTMLTextAreaElement>("#contact-message"))?.value;
 
     if (!token) {
       errorEl.textContent = errorLabel;

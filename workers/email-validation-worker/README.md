@@ -1,23 +1,35 @@
-## Usage
+## Email Validation Worker
 
-You can run the Worker defined by your new project by executing `wrangler dev` in this
-directory. This will start up an HTTP server and will allow you to iterate on your
-Worker without having to restart `wrangler`.
+A Cloudflare Worker that validates a Turnstile token and sends a contact form email via Email Routing.
 
-### Types and autocomplete
+### Setup
 
-This project also includes a pyproject.toml with some requirements which
-set up autocomplete and type hints for this Python Workers project.
-
-To get these installed you'll need `uv`, which you can install by following
-https://docs.astral.sh/uv/getting-started/installation/.
-
-Once `uv` is installed, you can run the following:
-
-```
-uv venv
-uv sync
+```sh
+npm install
 ```
 
-Then point your editor's Python plugin at the `.venv` directory. You should then have working
-autocomplete and type information in your editor.
+Set the Turnstile secret key:
+
+```sh
+npx wrangler secret put TURNSTILE_SECRET_KEY
+```
+
+### Development
+
+```sh
+npx wrangler dev
+```
+
+### Deploy
+
+```sh
+npx wrangler deploy
+```
+
+### Types
+
+After changing bindings in `wrangler.jsonc`, regenerate types:
+
+```sh
+npx wrangler types
+```

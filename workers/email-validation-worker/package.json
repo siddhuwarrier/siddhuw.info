@@ -3,11 +3,17 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"deploy": "uv run pywrangler deploy",
-		"dev": "uv run pywrangler dev",
-		"start": "uv run pywrangler dev"
+		"deploy": "npx wrangler deploy",
+		"dev": "npx wrangler dev",
+		"start": "npx wrangler dev",
+		"types": "npx wrangler types"
+	},
+	"dependencies": {
+		"mimetext": "^3.0.24"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250303.0",
+		"typescript": "^5.7.0",
 		"wrangler": "^4.69.0"
 	}
 }
