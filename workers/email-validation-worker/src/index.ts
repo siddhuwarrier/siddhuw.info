@@ -2,12 +2,18 @@ import { EmailMessage } from "cloudflare:email";
 import { createMimeMessage } from "mimetext";
 import { ContactFormBody } from "./models/contact-form-body";
 import { Env } from "./models/env";
+import { rateLimit } from "./services/rate-limiter.service";
 import { validateTurnstile } from "./services/turnstile-validation.service";
 
 
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
 		const url = new URL(request.url);
+		
+		// rate limit
+		if (!(await rateLimit(env.api_rate_limiter, url.pathname))) {
+			return new Response("Too many requests", { status: 429 })
+		}
 
 		switch (url.pathname) {
 			case '/validate':
